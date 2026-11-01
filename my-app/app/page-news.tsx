@@ -26,7 +26,7 @@ export function NewsPage({lang="th",category="all"}:{lang?:Lang;category?:NewsCa
   <section className="news-v13-end">
    <div className="site-wrap news-v13-end-inner">
     <div><span>{en?"KEEP EXPLORING":"เรียนรู้เพิ่มเติม"}</span><h2>{en?"Explore the cargo industry.":"เรียนรู้โลก Air Cargo ให้มากขึ้น"}</h2><p>{en?"Find industry terminology, official references and useful resources in the knowledge library.":"ดูคำศัพท์และแหล่งอ้างอิงด้านการขนส่งสินค้าทางอากาศเพิ่มเติมในห้องสมุดความรู้"}</p></div>
-    <Link href={en?"/en/resources":"/resources"} className="news-v13-end-link">{en?"Knowledge library":"ห้องสมุดความรู้"}<span aria-hidden="true">↗</span></Link>
+    <Link href={en?"/en/resources":"/resources"} className="news-v13-end-link">{en?"Knowledge library":"ห้องสมุดความรู้"}<span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></Link>
    </div>
   </section>
  </main>;
@@ -57,7 +57,7 @@ export function NewsArticlePage({slug,lang="th"}:{slug:string;lang?:Lang}){
      <div><dt>{en?"EVENT DATE":"วันที่จัดกิจกรรม"}</dt><dd>{details?(en?details.eventEn:details.eventTh):newsDate(item,i,en)}</dd></div>
      <div><dt>{en?"PUBLISHED BY":"หน่วยงานที่เผยแพร่"}</dt><dd>{newsSource(item,en)}</dd></div>
     </dl>
-    <a href={item.url} target="_blank" rel="noopener noreferrer" className="news-v14-source-link">{en?"Official announcement":"ประกาศต้นฉบับ"}<span aria-hidden="true">↗</span></a>
+    <a href={item.url} target="_blank" rel="noopener noreferrer" className="news-v14-source-link">{en?"Official announcement":"ประกาศต้นฉบับ"}<span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></a>
    </aside>
    <article className="news-v14-story">
     {details?details.sections.map(section=><section key={section.headingEn} className="news-v14-story-section">

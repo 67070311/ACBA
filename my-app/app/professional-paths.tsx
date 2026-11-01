@@ -1,3 +1,4 @@
+import {Icon} from "./ui-icons";
 import Link from "next/link";
 type Lang="th"|"en";
 
@@ -12,7 +13,7 @@ export function ProfessionalPaths({lang="th"}:{lang?:Lang}){
  const en=lang==="en",base=en?"/en":"";
  return <section id="professional-paths" className="site-wrap acba-professional">
   <div className="acba-professional-heading"><div><span className="acba-program-kicker">INDUSTRY / PROFESSIONAL LEARNING</span><h2>{en?"Beyond the classroom.":"เส้นทางวิชาชีพที่ควรรู้"}</h2></div><p>{en?"Professional standards, course codes and skills from published industry sources. The issuing bodies and training organizers remain separate from ACBA.":"รวมรหัสหลักสูตร มาตรฐานอาชีพ และแนวทางพัฒนาบุคลากรจากแหล่งเผยแพร่จริง โดยแยกผู้จัดอบรมและหน่วยงานรับรองออกจาก ACBA อย่างชัดเจน"}</p></div>
-  <div className="acba-professional-grid">{paths.map((x,i)=><Link key={x.code} href={base+x.href} className="acba-professional-item"><div><small>{String(i+1).padStart(2,"0")} / {x.code}</small><span aria-hidden="true">↗</span></div><h3>{en?x.en:x.th}</h3><p>{en?x.descEn:x.descTh}</p><strong>{en?"Read within ACBA":"อ่านรายละเอียดใน ACBA"}</strong></Link>)}</div>
-  <div className="acba-professional-reference"><p>{en?"Primary references: TPQI occupational standards and TAFA program notices. ACBA does not issue these certifications or take registrations here.":"อ้างอิงมาตรฐานอาชีพของ TPQI และประกาศหลักสูตร TAFA — เว็บไซต์ ACBA ไม่ได้ออกใบรับรองหรือรับสมัครแทนผู้จัด"}</p><div><a href="https://tpqi-net.tpqi.go.th/index.php/qualifications/4701" target="_blank" rel="noopener noreferrer">TPQI ↗</a><a href="https://www.tafathai.org/training-and-education" target="_blank" rel="noopener noreferrer">TAFA ↗</a></div></div>
+  <div className="acba-professional-grid">{paths.map((x,i)=><Link key={x.code} href={base+x.href} className="acba-professional-item"><div><small>{String(i+1).padStart(2,"0")} / {x.code}</small><span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></div><h3>{en?x.en:x.th}</h3><p>{en?x.descEn:x.descTh}</p><strong>{en?"Read within ACBA":"อ่านรายละเอียดใน ACBA"}</strong></Link>)}</div>
+  <div className="acba-professional-reference"><p>{en?"Primary references: TPQI occupational standards and TAFA program notices. ACBA does not issue these certifications or take registrations here.":"อ้างอิงมาตรฐานอาชีพของ TPQI และประกาศหลักสูตร TAFA — เว็บไซต์ ACBA ไม่ได้ออกใบรับรองหรือรับสมัครแทนผู้จัด"}</p><div><a href="https://tpqi-net.tpqi.go.th/index.php/qualifications/4701" target="_blank" rel="noopener noreferrer">TPQI <Icon name="arrow-up-right" size={16}/></a><a href="https://www.tafathai.org/training-and-education" target="_blank" rel="noopener noreferrer">TAFA <Icon name="arrow-up-right" size={16}/></a></div></div>
  </section>;
 }

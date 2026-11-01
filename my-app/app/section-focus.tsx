@@ -1,3 +1,4 @@
+import {Icon} from "./ui-icons";
 import { SectionHeading } from "./site-section-heading";
 const focus = [
  {no:"01",head:"Industry Representation",th:"เชื่อมโยงเสียงของผู้ประกอบการ",body:"ร่วมสื่อสารและแลกเปลี่ยนข้อเสนอแนะระหว่างภาคธุรกิจและหน่วยงานที่เกี่ยวข้องกับการขนส่งสินค้าทางอากาศ"},
@@ -16,7 +17,7 @@ return <section className="section focus-section" id="objectives">
      <div className="focus-number">{item.no}</div>
      <div className="focus-name"><h3>{item.head}</h3><p>{item.th}</p></div>
      <p className="focus-copy">{item.body}</p>
-     <span className="focus-symbol" aria-hidden="true">↗</span>
+     <span className="focus-symbol" aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span>
    </article>)}
   </div>
   <div className="focus-bottom"><span>ACBA / AIR CARGO IN THAILAND</span><span>CONNECTING PEOPLE, POLICY &amp; PROGRESS</span></div>

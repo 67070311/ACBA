@@ -1,4 +1,5 @@
 "use client";
+import {Icon} from "./ui-icons";
 import Link from "next/link";
 import {useState,type FormEvent} from "react";
 import {IMAGES} from "./site-content";
@@ -76,7 +77,7 @@ export function JoinPage({lang="th"}:{lang?:Lang}){
     <h1 id="join-title">{en?<>Membership<br/><em>starts here.</em></>:<>สมัครสมาชิก<br/><em>ACBA</em></>}</h1>
     <p>{en?"Explore membership information, prepare company documents and download a draft enquiry—all within this website.":"รวมข้อมูลการสมัครสมาชิก การเตรียมเอกสาร และแบบฟอร์มร่างข้อมูลในหน้าเดียว เพื่อให้ผู้สนใจเตรียมพร้อมก่อนยื่นสมัครกับสมาคม"}</p>
     <div className="acba-join-hero-actions">
-     <a className="acba-join-primary" href="#membership-form">{en?"Prepare membership form":"กรอกแบบฟอร์มสมัครสมาชิก"} <span aria-hidden="true">↗</span></a>
+     <a className="acba-join-primary" href="#membership-form">{en?"Prepare membership form":"กรอกแบบฟอร์มสมัครสมาชิก"} <span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></a>
      <a className="acba-join-text-link" href="#membership-criteria">{en?"Read requirements":"ดูข้อมูลและเอกสารที่ต้องเตรียม"}</a>
     </div>
     <div className="acba-join-status"><span className="acba-status-dot"/><strong>{en?"Application preview":"เตรียมสมัคร / แบบฟอร์มฉบับร่าง"}</strong><p>{en?"Official online submission is not yet available. No application is sent from this website.":"ยังไม่เปิดรับสมัครออนไลน์จริง ไม่มีการส่งข้อมูลให้ ACBA จากเว็บไซต์นี้"}</p></div>
@@ -92,7 +93,7 @@ export function JoinPage({lang="th"}:{lang?:Lang}){
    <a href="#membership-overview">{en?"Overview":"ภาพรวม"}</a>
    <a href="#membership-criteria">{en?"Documents":"เอกสารที่ต้องเตรียม"}</a>
    <a href="#membership-steps">{en?"Process":"ขั้นตอน"}</a>
-   <a href="#membership-form" className="acba-anchor-primary">{en?"Membership form":"แบบฟอร์มสมัครสมาชิก"} <span aria-hidden="true">↗</span></a>
+   <a href="#membership-form" className="acba-anchor-primary">{en?"Membership form":"แบบฟอร์มสมัครสมาชิก"} <span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></a>
   </nav>
 
   <section id="membership-overview" className="site-wrap acba-join-overview">
@@ -103,10 +104,10 @@ export function JoinPage({lang="th"}:{lang?:Lang}){
    </div>
    <div className="acba-join-value-grid">
     <article><span>01 / COMMUNITY</span><h3>{en?"Industry connections":"เครือข่ายผู้ประกอบการ"}</h3><p>{en?"Explore collaboration across airlines, forwarders, cargo operations and sector organizations.":"ศึกษาความร่วมมือของสายการบิน ตัวแทนขนส่ง ผู้ให้บริการ Cargo และหน่วยงานในอุตสาหกรรม"}</p></article>
-    <article><span>02 / LEARNING</span><h3>{en?"Knowledge & training":"การอบรมและองค์ความรู้"}</h3><p>{en?"Some TAFA course notices publish an ACBA-member fee. Eligibility depends on each organizer's announcement.":"หลักสูตรบางรายการของ TAFA เคยประกาศอัตราสมาชิก ACBA โดยต้องตรวจเงื่อนไขของแต่ละหลักสูตร"}</p><Link href={base+"/training"}>{en?"View training":"ดูหลักสูตร"} ↗</Link></article>
+    <article><span>02 / LEARNING</span><h3>{en?"Knowledge & training":"การอบรมและองค์ความรู้"}</h3><p>{en?"Some TAFA course notices publish an ACBA-member fee. Eligibility depends on each organizer's announcement.":"หลักสูตรบางรายการของ TAFA เคยประกาศอัตราสมาชิก ACBA โดยต้องตรวจเงื่อนไขของแต่ละหลักสูตร"}</p><Link href={base+"/training"}>{en?"View training":"ดูหลักสูตร"} <Icon name="arrow-up-right" size={16}/></Link></article>
     <article><span>03 / ASSOCIATION</span><h3>{en?"Official membership terms":"เงื่อนไขสมาชิกอย่างเป็นทางการ"}</h3><p>{en?"ACBA must confirm categories, voting rights, dues and application approval procedures before they can be published here.":"ประเภทสมาชิก สิทธิออกเสียง ค่าบำรุง และวิธีพิจารณารับสมาชิก ต้องได้รับการยืนยันจาก ACBA ก่อนเผยแพร่"}</p></article>
    </div>
-   <div className="acba-join-context"><strong>{en?"Reference: TAFA membership page":"อ้างอิงโครงสร้างจากหน้าสมัครสมาชิก TAFA"}</strong><p>{en?"TAFA publishes specific requirements for its own members. This page takes inspiration from that information architecture, not TAFA's legal conditions or member benefits.":"TAFA มีการแสดงสิทธิประโยชน์ ประเภทสมาชิก คุณสมบัติ และเอกสารในหน้าของตน แต่ข้อกำหนดเหล่านั้นเป็นของ TAFA ไม่สามารถนำมาใช้แทนข้อบังคับของ ACBA ได้"}</p><a href="https://www.tafathai.org/สมัครสมาชิก" target="_blank" rel="noopener noreferrer">{en?"Read TAFA reference ↗":"ดูหน้าตัวอย่าง TAFA ↗"}</a></div>
+   <div className="acba-join-context"><strong>{en?"Reference: TAFA membership page":"อ้างอิงโครงสร้างจากหน้าสมัครสมาชิก TAFA"}</strong><p>{en?"TAFA publishes specific requirements for its own members. This page takes inspiration from that information architecture, not TAFA's legal conditions or member benefits.":"TAFA มีการแสดงสิทธิประโยชน์ ประเภทสมาชิก คุณสมบัติ และเอกสารในหน้าของตน แต่ข้อกำหนดเหล่านั้นเป็นของ TAFA ไม่สามารถนำมาใช้แทนข้อบังคับของ ACBA ได้"}</p><a href="https://www.tafathai.org/สมัครสมาชิก" target="_blank" rel="noopener noreferrer">{en?"Read TAFA reference":"ดูหน้าตัวอย่าง TAFA"} <Icon name="arrow-up-right" size={16}/></a></div>
   </section>
 
   <section id="membership-criteria" className="acba-join-doc-section">
@@ -115,7 +116,7 @@ export function JoinPage({lang="th"}:{lang?:Lang}){
      <span className="acba-join-kicker">02 / PREPARE TO APPLY</span>
      <h2>{en?<>What should<br/><em>you prepare?</em></>:<>เตรียมอะไรบ้าง<br/><em>ก่อนสมัคร?</em></>}</h2>
      <p>{en?"An illustrative preparation checklist for business applicants. ACBA's required document list, validity periods and membership qualifications have not been confirmed.":"เช็กลิสต์เตรียมข้อมูลสำหรับผู้ประกอบการ ไม่ใช่รายการเอกสารบังคับของ ACBA เนื่องจากคุณสมบัติ อายุเอกสาร และเงื่อนไขการยื่นยังรอสมาคมยืนยัน"}</p>
-     <a href="#membership-form" className="acba-join-secondary">{en?"Go to the draft form":"ไปยังแบบฟอร์ม"} <span aria-hidden="true">↗</span></a>
+     <a href="#membership-form" className="acba-join-secondary">{en?"Go to the draft form":"ไปยังแบบฟอร์ม"} <span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></a>
     </div>
     <div className="acba-join-doc-list">
      {suggestedDocs.map((d,i)=><div key={i}><span>{String(i+1).padStart(2,"0")}</span><p>{en?d.en:d.th}</p><small>{en?"Suggested":"เตรียมเบื้องต้น"}</small></div>)}
@@ -135,7 +136,7 @@ export function JoinPage({lang="th"}:{lang?:Lang}){
      <h2>{en?<>Start with<br/><em>your details.</em></>:<>แบบฟอร์ม<br/><em>สมัครสมาชิก</em></>}</h2>
      <p>{en?"Complete the fields and download a draft document to your own device. The form does not upload, transmit or store your details on a server.":"กรอกข้อมูลแล้วดาวน์โหลดเป็นเอกสารฉบับร่างเก็บในเครื่องได้ โดยไม่มีการอัปโหลด ส่ง หรือบันทึกข้อมูลเข้าสู่เซิร์ฟเวอร์"}</p>
      <div className="acba-join-form-notice"><strong>{en?"Not yet an official application":"ยังไม่ใช่ใบสมัครอย่างเป็นทางการ"}</strong><p>{en?"ACBA must approve the final application documents, privacy notice and submission channel before actual applications can be processed.":"เมื่อ ACBA ยืนยันใบสมัครจริง นโยบายข้อมูลส่วนบุคคล และช่องทางรับสมัครแล้ว จึงจะสามารถเปิดระบบยื่นสมัครจริงได้"}</p></div>
-     <Link href={base+"/contact"} className="acba-join-contact">{en?"See association contact information":"ดูข้อมูลติดต่อสมาคม"} ↗</Link>
+     <Link href={base+"/contact"} className="acba-join-contact">{en?"See association contact information":"ดูข้อมูลติดต่อสมาคม"} <Icon name="arrow-up-right" size={16}/></Link>
     </div>
     <div className="acba-join-form-card">
      <div className="acba-join-form-heading"><span>ACBA / DRAFT FORM</span><h3>{en?"Membership enquiry details":"ข้อมูลสำหรับเตรียมสมัครสมาชิก"}</h3><p>{en?"Fields marked * are required to generate your draft.":"ช่องที่มี * จำเป็นสำหรับการสร้างร่างเอกสาร"}</p></div>
@@ -167,7 +168,7 @@ export function JoinPage({lang="th"}:{lang?:Lang}){
   </section>
   <section className="site-wrap acba-join-final">
    <div><span className="acba-join-kicker">QUESTIONS / BEFORE APPLYING</span><h2>{en?"Want to know more about ACBA?":"ต้องการข้อมูลเพิ่มเติมเกี่ยวกับสมาชิก?"}</h2><p>{en?"Explore the member network or review available association references. ACBA-specific eligibility and dues remain pending verification.":"ดูข้อมูลเครือข่ายสมาชิกและแหล่งอ้างอิงสมาคม ส่วนคุณสมบัติและค่าบำรุงสมาชิก ACBA จะเผยแพร่หลังได้รับการยืนยัน"}</p></div>
-   <Link href={base+"/members"}>{en?"Explore membership":"ดูข้อมูลสมาชิก"} ↗</Link>
+   <Link href={base+"/members"}>{en?"Explore membership":"ดูข้อมูลสมาชิก"} <Icon name="arrow-up-right" size={16}/></Link>
   </section>
  </main>;
 }

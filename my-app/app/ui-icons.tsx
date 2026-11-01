@@ -1,9 +1,12 @@
 import type { SVGProps, ReactNode } from "react";
-export type IconName = "plane"|"package"|"shield"|"users"|"newspaper"|"calendar"|"book"|"mail"|"globe"|"check"|"building"|"clock"|"compass"|"layers"|"graduation"|"file"|"handshake"|"map"|"search"|"phone";
+export type IconName = "plane"|"package"|"shield"|"users"|"newspaper"|"calendar"|"book"|"mail"|"globe"|"check"|"building"|"clock"|"compass"|"layers"|"graduation"|"file"|"handshake"|"map"|"search"|"phone"|"arrow-up-right"|"arrow-right"|"arrow-left";
 type Props={name:IconName;size?:number;className?:string;strokeWidth?:number};
 export function Icon({name,size=23,className="",strokeWidth=1.65}:Props){
  const props:SVGProps<SVGSVGElement>={width:size,height:size,viewBox:"0 0 24 24",fill:"none",stroke:"currentColor",strokeWidth,strokeLinecap:"round",strokeLinejoin:"round",className,"aria-hidden":true};
  const paths:Record<IconName,ReactNode>={
+ "arrow-up-right":<><path d="M7 17 17 7M8 7h9v9"/></>,
+ "arrow-right":<><path d="M5 12h14m-6-6 6 6-6 6"/></>,
+ "arrow-left":<><path d="M19 12H5m6-6-6 6 6 6"/></>,
  plane:<><path d="m17.6 2.7 2.1 2.1a2 2 0 0 1 .1 2.7l-5.7 6.3 1.7 5.6-1.6 1.6-4.1-5.2-4.5 4.5-2.5.2.2-2.5 4.5-4.5-5.2-4.1 1.6-1.6 5.6 1.7 6.3-5.7a2 2 0 0 1 2.7.1Z"/></>,
  package:<><path d="M3 7 12 2l9 5v10l-9 5-9-5V7Z"/><path d="m3 7 9 5 9-5M12 12v10M7.5 4.5l9 5"/></>,
  shield:<><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></>,

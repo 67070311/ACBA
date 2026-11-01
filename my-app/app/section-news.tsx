@@ -1,3 +1,4 @@
+import {Icon} from "./ui-icons";
 import { NEWS } from "./site-content";
 import { Photo } from "./site-photo";
 import { SectionHeading } from "./site-section-heading";
@@ -15,10 +16,10 @@ return <section className="section news-section" id="news">
      <div className="news-card-meta"><span>{item.category}</span><time>{item.date}</time></div>
      <h3>{item.title}</h3>
      <p>{item.description}</p>
-     <div className="news-source"><span>แหล่งข่าว: {item.source}</span><span className="round-arrow">↗</span></div>
+     <div className="news-source"><span>แหล่งข่าว: {item.source}</span><span className="round-arrow"><Icon name="arrow-up-right" size={16}/></span></div>
    </a>)}
   </div>
-  <div className="news-bottom-note"><span>ข่าวจากหน่วยงานต้นทางที่มีการระบุชื่อ ACBA</span><span>EXTERNAL PRESS SOURCES ↗</span></div>
+  <div className="news-bottom-note"><span>ข่าวจากหน่วยงานต้นทางที่มีการระบุชื่อ ACBA</span><span>EXTERNAL PRESS SOURCES <Icon name="arrow-up-right" size={16}/></span></div>
  </div>
 </section>;
 }

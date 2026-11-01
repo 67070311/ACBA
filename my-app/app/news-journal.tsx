@@ -76,7 +76,7 @@ export function NewsJournal({lang="th",initialCategory="all"}:{lang?:Lang;initia
       <h2>{newsDisplayTitle(lead,lead.i,en)}</h2>
       <p>{newsDisplayDescription(lead,lead.i,en)}</p>
      </div>
-     <div className="news-v13-lead-footer"><span>{en?"Read details":"อ่านรายละเอียด"}</span><span className="news-v13-feature-arrow" aria-hidden="true">↗</span></div>
+     <div className="news-v13-lead-footer"><span>{en?"Read details":"อ่านรายละเอียด"}</span><span className="news-v13-feature-arrow" aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></div>
     </div>
    </Link>}
    {rest.length>0&&<>
@@ -85,7 +85,7 @@ export function NewsJournal({lang="th",initialCategory="all"}:{lang?:Lang;initia
      <div className="news-v13-card-media"><ContentPhoto src={item.image} alt={en?"Illustrative industry photo":"ภาพประกอบอุตสาหกรรมขนส่งสินค้าทางอากาศ"} sizes="(max-width: 650px) 100vw, (max-width: 1050px) 48vw, 31vw"/></div>
      <div className="news-v13-card-meta"><span>{categoryLabel(item,en)}</span><time>{newsDate(item,item.i,en)}</time></div>
      <h3>{newsDisplayTitle(item,item.i,en)}</h3><p>{newsDisplayDescription(item,item.i,en)}</p>
-     <div className="news-v13-card-bottom"><span>{en?"Read details":"อ่านรายละเอียด"}</span><span aria-hidden="true">↗</span></div>
+     <div className="news-v13-card-bottom"><span>{en?"Read details":"อ่านรายละเอียด"}</span><span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></div>
     </Link>)}</div>
    </>}
   </>}

@@ -1,3 +1,4 @@
+import {Icon} from "./ui-icons";
 import Link from "next/link";
 const VIDEO = "/home/banner/13371669-uhd_3840_2160_24fps.mp4";
 export function HeroSection() {
@@ -12,8 +13,8 @@ export function HeroSection() {
       <h1>Moving cargo.<br/><em>Connecting</em><br/>possibilities<span className="hero-period">.</span></h1>
       <p className="hero-thai">ขับเคลื่อนความร่วมมือ<br/>เพื่ออนาคตธุรกิจการบินขนส่งสินค้าไทย</p>
       <div className="hero-buttons">
-        <Link className="button button-red" href="/#about">รู้จัก ACBA <span>↗</span></Link>
-        <Link className="button button-glass" href="/#news">ข่าวสารและกิจกรรม <span>↗</span></Link>
+        <Link className="button button-red" href="/#about">รู้จัก ACBA <span><Icon name="arrow-up-right" size={16}/></span></Link>
+        <Link className="button button-glass" href="/#news">ข่าวสารและกิจกรรม <span><Icon name="arrow-up-right" size={16}/></span></Link>
       </div>
     </div>
     <div className="hero-bottom">

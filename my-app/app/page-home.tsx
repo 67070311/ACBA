@@ -53,7 +53,7 @@ export function HomeLanding({lang="th"}:{lang?:Lang}){
       <p>{en?<>A place for the air cargo industry to <strong>connect, exchange knowledge and move forward together.</strong></>:<>พื้นที่แห่งการเชื่อมโยงผู้ประกอบการ แลกเปลี่ยนองค์ความรู้ และ<strong>ขับเคลื่อนอุตสาหกรรม Air Cargo ไทยไปด้วยกัน</strong></>}</p>
       <div className="home-intro-v12-note">
        <span>{en?"A registered trade association, connecting stakeholders across Thailand's air cargo sector.":"ACBA คือสมาคมการค้าธุรกิจการบินขนส่งสินค้า ซึ่งเชื่อมโยงผู้ประกอบการและหน่วยงานที่เกี่ยวข้องในประเทศไทย"}</span>
-       <Link href={to("/about",lang)+"#acba-history-title"} className="home-intro-v12-link">{en?"Explore our history":"อ่านประวัติสมาคม"}<span aria-hidden="true">→</span></Link>
+       <Link href={to("/about",lang)+"#acba-history-title"} className="home-intro-v12-link">{en?"Explore our history":"อ่านประวัติสมาคม"}<span aria-hidden="true"><Icon name="arrow-right" size={16}/></span></Link>
       </div>
      </div>
     </Reveal>
@@ -87,7 +87,7 @@ export function HomeLanding({lang="th"}:{lang?:Lang}){
       <div className="article-card-line">{en?"Read story":"อ่านรายละเอียด"}</div>
      </Link></Reveal>)}
     </div>
-    <div className="home-news-swipe-cue" aria-hidden="true"><span>←</span> {en?"Swipe to explore news":"ปัดเพื่อดูข่าวถัดไป"} <span>→</span></div>
+    <div className="home-news-swipe-cue" aria-hidden="true"><span><Icon name="arrow-left" size={16}/></span> {en?"Swipe to explore news":"ปัดเพื่อดูข่าวถัดไป"} <span><Icon name="arrow-right" size={16}/></span></div>
    </section>
 
    <section className="closing-band site-wrap">

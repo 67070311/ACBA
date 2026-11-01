@@ -1,3 +1,4 @@
+import {Icon} from "./ui-icons";
 import {ButtonLink} from "./ui-elements";
 import {AboutVisualCarousel} from "./about-visual-carousel";
 import {AboutFocusSwitch} from "./about-focus-switch";
@@ -22,6 +23,6 @@ export function AboutPage({lang="th"}:{lang?:Lang}){
   <AboutHistoryTimeline lang={lang}/>
   <AssociationScope lang={lang}/>
   <AboutFocusSwitch lang={lang}/>
-  <section className="about-scope-end site-wrap"><div><span>ACBA / OFFICIAL INFORMATION</span><h2>{en?"Need an official document?":"ต้องการข้อมูลทางการของสมาคม?"}</h2><p>{en?"Formal vision, mission, articles, current board and governing documents will be published when confirmed by ACBA. We do not substitute other associations' information.":"ข้อความวิสัยทัศน์ พันธกิจ วัตถุประสงค์ตามข้อบังคับ รายชื่อกรรมการและเอกสารที่มีผลใช้จริงจะเผยแพร่เมื่อ ACBA ยืนยัน โดยไม่นำข้อมูลของสมาคมอื่นมาแทน"}</p></div><Link href={to("/contact")}>{en?"View contact details":"ดูข้อมูลติดต่อ"} ↗</Link></section>
+  <section className="about-scope-end site-wrap"><div><span>ACBA / OFFICIAL INFORMATION</span><h2>{en?"Need an official document?":"ต้องการข้อมูลทางการของสมาคม?"}</h2><p>{en?"Formal vision, mission, articles, current board and governing documents will be published when confirmed by ACBA. We do not substitute other associations' information.":"ข้อความวิสัยทัศน์ พันธกิจ วัตถุประสงค์ตามข้อบังคับ รายชื่อกรรมการและเอกสารที่มีผลใช้จริงจะเผยแพร่เมื่อ ACBA ยืนยัน โดยไม่นำข้อมูลของสมาคมอื่นมาแทน"}</p></div><Link href={to("/contact")}>{en?"View contact details":"ดูข้อมูลติดต่อ"} <Icon name="arrow-up-right" size={16}/></Link></section>
  </main>;
 }

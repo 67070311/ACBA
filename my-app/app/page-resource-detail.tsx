@@ -1,3 +1,4 @@
+import {Icon} from "./ui-icons";
 import Link from "next/link";
 import {notFound} from "next/navigation";
 import {SiteBackButton} from "./site-back-button";
@@ -24,8 +25,8 @@ export function ResourceDetailPage({lang="th",slug}:{lang?:Lang;slug:string}){
     <article className="library-detail-article">
       <span className="library-detail-section-label">{en?"KEY POINTS":"สาระสำคัญ"}</span>
       {points.map((point,i)=><section className="library-detail-point" key={i}><span>{String(i+1).padStart(2,"0")}</span><p>{point}</p></section>)}
-      {info.related&&<div className="library-detail-related"><span>{en?"READ NEXT":"อ่านต่อในเว็บไซต์"}</span><Link href={root+info.related}>{en?info.relatedEn:info.relatedTh}<span aria-hidden="true">↗</span></Link></div>}
-      <div className="library-detail-source"><strong>{en?"Original source":"แหล่งข้อมูลต้นฉบับ"}</strong><p>{en?"The full, authoritative information is maintained by the publishing organization.":"รายละเอียดฉบับเต็มและข้อมูลที่เป็นทางการดูได้จากหน่วยงานเจ้าของเอกสาร"}</p><a href={item.url} target="_blank" rel="noopener noreferrer">{en?"Open official publication":"เปิดเอกสารจากหน่วยงานต้นทาง"} <span aria-hidden="true">↗</span></a></div>
+      {info.related&&<div className="library-detail-related"><span>{en?"READ NEXT":"อ่านต่อในเว็บไซต์"}</span><Link href={root+info.related}>{en?info.relatedEn:info.relatedTh}<span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></Link></div>}
+      <div className="library-detail-source"><strong>{en?"Original source":"แหล่งข้อมูลต้นฉบับ"}</strong><p>{en?"The full, authoritative information is maintained by the publishing organization.":"รายละเอียดฉบับเต็มและข้อมูลที่เป็นทางการดูได้จากหน่วยงานเจ้าของเอกสาร"}</p><a href={item.url} target="_blank" rel="noopener noreferrer">{en?"Open official publication":"เปิดเอกสารจากหน่วยงานต้นทาง"} <span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></a></div>
     </article>
    </div>
  </main>;

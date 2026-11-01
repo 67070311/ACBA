@@ -1,3 +1,4 @@
+import {Icon} from "./ui-icons";
 import Link from "next/link";
 import {notFound} from "next/navigation";
 import {SiteBackButton} from "./site-back-button";
@@ -43,7 +44,7 @@ export function TrainingDetailPage({lang="th",type,slug}:{lang?:Lang;type:"cours
     <div className="training-insight-notice">
      <strong>{en?"Important to know":"ข้อควรทราบ"}</strong>
      <p>{en?topic.noticeEn:topic.noticeTh}</p>
-     <p className="training-insight-reference">{en?"Source / reference":"อ้างอิง"}: {en?(topic.sourceEn??topic.source):topic.source}</p>{topic.sourceUrl&&<a href={topic.sourceUrl} target="_blank" rel="noopener noreferrer" className="training-insight-source-link">{en?"See original source ↗":"ตรวจสอบข้อมูลต้นฉบับ ↗"}</a>}
+     <p className="training-insight-reference">{en?"Source / reference":"อ้างอิง"}: {en?(topic.sourceEn??topic.source):topic.source}</p>{topic.sourceUrl&&<a href={topic.sourceUrl} target="_blank" rel="noopener noreferrer" className="training-insight-source-link">{en?"See original source":"ตรวจสอบข้อมูลต้นฉบับ"} <Icon name="arrow-up-right" size={16}/></a>}
     </div>
     <div className="training-insight-actions">
      <Link href={root}>{en?"Explore other courses":"ดูหลักสูตรและความรู้อื่น"}</Link>

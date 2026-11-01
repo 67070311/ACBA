@@ -45,7 +45,7 @@ export function TrainingCourseBrowser({lang="th"}:{lang?:"th"|"en"}){
      <p>{en?c.descEn:c.descTh}</p>
      <div className="course-prices">
       <div><small>{en?"Published fee / confirm":"ราคาอ้างอิง / ตรวจสอบอีกครั้ง"}</small><strong>{c.id==="distribution"||c.id==="forwarder"?"฿7,500":c.member==="—"?(en?"Ask organizer":"สอบถามผู้จัด"):"฿"+c.member}</strong></div>
-      <span className="course-more" aria-hidden="true"><span aria-hidden="true">↗</span></span>
+      <span className="course-more" aria-hidden="true"><span aria-hidden="true"><Icon name="arrow-up-right" size={16}/></span></span>
      </div>
     </div>
    </Link>)}
