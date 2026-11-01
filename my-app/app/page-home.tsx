@@ -20,7 +20,7 @@ export function HomeLanding({lang="th"}:{lang?:Lang}){
  const en=lang==="en";
  return <main lang={lang} className="home-main">
    <section className="home-hero original-hero">
-    <video className="hero-video" autoPlay muted playsInline loop preload="metadata" aria-hidden="true" poster={IMAGES.landing}>
+    <video className="hero-video" autoPlay muted playsInline loop preload="auto" aria-hidden="true">
       <source src="/home/banner/13371669-uhd_3840_2160_24fps.mp4" type="video/mp4"/>
     </video>
     <div className="home-hero-wash"/>

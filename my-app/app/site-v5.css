@@ -234,3 +234,18 @@ h1 em,h2 em,h3 em{color:var(--red)}
 .learning-feature-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:29px}
 .learning-wide-visual{min-height:455px;position:relative;overflow:hidden}
 .learning-wide-visual img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+
+/* Home hero reference: vivid cinematic video, no faded white surface */
+.home-main .home-hero.original-hero{background:#10273a}
+.home-main .home-hero.original-hero .hero-video{opacity:1!important;filter:none!important;object-fit:cover;object-position:center center}
+.home-main .home-hero.original-hero .home-hero-wash{background:linear-gradient(90deg,rgba(7,18,30,.58) 0%,rgba(7,18,30,.36) 25%,rgba(7,18,30,.08) 55%,transparent 78%)!important;opacity:1!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.home-main .home-hero.original-hero .home-hero-panel{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;filter:none!important;padding:0!important}
+.home-main .home-hero.original-hero .hero-kicker{color:rgba(255,255,255,.92)!important}
+.home-main .home-hero.original-hero .hero-kicker span{color:rgba(255,255,255,.65)!important}
+.home-main .home-hero.original-hero h1{color:#fff!important;text-shadow:0 7px 26px rgba(0,0,0,.15)}
+.home-main .home-hero.original-hero .home-hero-panel>p{color:rgba(255,255,255,.91)!important;max-width:640px}
+.home-main .home-hero.original-hero .hero-bottom-lineout,.home-main .home-hero.original-hero .hero-scroll-label{color:rgba(255,255,255,.88)!important}
+.home-main .home-hero.original-hero .home-quick-actions .home-quick-link{background:#fff!important;color:#24313b!important}
+.home-main .home-hero.original-hero .home-quick-actions .home-quick-join{background:#e52b3d!important;color:#fff!important;border-color:#e52b3d!important}
+.home-main .home-hero.original-hero .home-quick-actions .home-quick-join :is(.home-quick-icon,.home-quick-chevron){color:#fff!important}
+@media(max-width:1000px){.home-main .home-hero.original-hero .home-hero-panel{width:100%!important}}

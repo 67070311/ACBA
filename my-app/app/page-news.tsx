@@ -19,7 +19,7 @@ export function NewsPage({lang="th",category="all"}:{lang?:Lang;category?:NewsCa
    <div className="news-v13-masthead-side">
     <span>{en?"THAILAND · AIR CARGO INDUSTRY":"THAILAND · AIR CARGO INDUSTRY"}</span>
     <p>{en?"Follow ACBA activities and wider industry news in one place, organized by category.":"ติดตามกิจกรรมสมาคมและข่าวสารอุตสาหกรรม Air Cargo ได้ในหน้าเดียว พร้อมแยกหมวดหมู่ให้เลือกอ่าน"}</p>
-    <div className="news-v13-masthead-rule"><span>{en?"CARGO JOURNAL":"ข่าวสารและกิจกรรม"}</span><strong>2026</strong></div>
+    <div className="news-v13-masthead-rule"><span>{en?"CARGO JOURNAL":"ข่าวสารและกิจกรรม"}</span></div>
    </div>
   </section>
   <NewsJournal lang={lang} initialCategory={category}/>

@@ -87,5 +87,16 @@
 
 /* Preserve the existing editorial masthead; add an aviation photo behind it. */
 .news-v13 .news-v13-masthead{position:relative;isolation:isolate;}
-.news-v13 .news-v13-masthead::before{content:"";position:absolute;z-index:-1;inset:28px 0 24px;border-radius:22px;background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.89) 48%,rgba(255,255,255,.76) 100%),url("https://images.pexels.com/photos/32642357/pexels-photo-32642357.jpeg?auto=compress&cs=tinysrgb&w=1800") center 52%/cover no-repeat;pointer-events:none;}
-@media(max-width:720px){.news-v13 .news-v13-masthead::before{inset:18px 0 14px;border-radius:15px;background-image:linear-gradient(90deg,rgba(255,255,255,.93),rgba(255,255,255,.82)),url("https://images.pexels.com/photos/32642357/pexels-photo-32642357.jpeg?auto=compress&cs=tinysrgb&w=1800");}}
+.news-v13 .news-v13-masthead::before{content:"";position:absolute;z-index:-1;inset:28px 0 24px;border-radius:22px;background:linear-gradient(90deg,rgba(8,22,35,.62) 0%,rgba(8,22,35,.42) 48%,rgba(8,22,35,.18) 100%),url("https://images.pexels.com/photos/32642359/pexels-photo-32642359.jpeg?auto=compress&cs=tinysrgb&w=1800") center 52%/cover no-repeat;pointer-events:none;}
+@media(max-width:720px){.news-v13 .news-v13-masthead::before{inset:18px 0 14px;border-radius:15px;background-image:linear-gradient(90deg,rgba(8,22,35,.62),rgba(8,22,35,.25)),url("https://images.pexels.com/photos/32642359/pexels-photo-32642359.jpeg?auto=compress&cs=tinysrgb&w=1800");}}
+
+/* News banner: vivid photo and readable light text, no milky overlay. */
+.news-v13 .news-v13-masthead :is(h1,.news-v13-masthead-side>span,.news-v13-masthead-side p,.news-v13-masthead-rule,.news-v13-masthead-rule span){color:#fff!important;text-shadow:0 2px 14px rgba(0,0,0,.32)}
+.news-v13 .news-v13-masthead h1 em{color:#ff5064!important}
+.news-v13 .news-v13-masthead .news-v13-masthead-rule{border-top-color:rgba(255,255,255,.5)}
+.news-v13 .news-v13-masthead .news-v13-eyebrow{color:#fff!important;text-shadow:0 2px 14px rgba(0,0,0,.3)}
+
+/* Full-bleed newsroom hero: image reaches both viewport edges, no rounded frame. */
+.news-v13 .news-v13-masthead.site-wrap{width:100%;max-width:none;margin:0;padding-left:max(28px,calc((100vw - 1360px)/2));padding-right:max(28px,calc((100vw - 1360px)/2));}
+.news-v13 .news-v13-masthead::before{inset:0;border-radius:0;}
+@media(max-width:720px){.news-v13 .news-v13-masthead.site-wrap{padding-left:22px;padding-right:22px}.news-v13 .news-v13-masthead::before{inset:0;border-radius:0;}}
