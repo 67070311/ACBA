@@ -109,7 +109,7 @@ export function AboutHistoryTimeline({lang="th"}:{lang?:Lang}){
   </div>
   <div className="site-wrap about-archive-afterword">
    <span>{en?"ACBA / HISTORY":"ACBA / ประวัติสมาคม"}</span>
-   <p>{en?"The entries reflect published evidence, not a complete record of every association activity. Dates are associated with the specified source reports.":"Timeline นี้เป็นตัวอย่างหมุดหมายที่ตรวจสอบได้จากแหล่งข้อมูลที่เผยแพร่ ไม่ใช่บันทึกกิจกรรมของสมาคมทุกปี โดยแสดงช่วงปีตามเอกสารต้นทาง"}</p>
+   <p>{en?"Explore key milestones and published records from different periods of the association's history.":"สำรวจหมุดหมายสำคัญของสมาคมผ่านเหตุการณ์และเอกสารที่เผยแพร่ในแต่ละช่วงเวลา"}</p>
   </div>
  </section>;
 }

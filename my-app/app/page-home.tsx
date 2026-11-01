@@ -64,7 +64,7 @@ export function HomeLanding({lang="th"}:{lang?:Lang}){
    <section className="home-services site-wrap">
     <div className="section-title">
      <Reveal><div><Eyebrow>{en?"OUR FOCUS":"ขอบเขตความร่วมมือ"}</Eyebrow><h2>{en?<>What we<br/><em>work toward.</em></>:<>สิ่งที่เชื่อมโยง<br/><em>อุตสาหกรรมเข้าด้วยกัน</em></>}</h2></div></Reveal>
-     <p>{en?"Focus areas drawn from publicly documented activities. These are not the association's official constitutional objectives.":"บทบาทที่สรุปจากกิจกรรมซึ่งมีหลักฐานเผยแพร่ ไม่ใช่วัตถุประสงค์อย่างเป็นทางการตามข้อบังคับสมาคม"}</p>
+     <p>{en?"Explore key areas of collaboration across the air cargo industry.":"สำรวจแนวทางความร่วมมือและการพัฒนาอุตสาหกรรมขนส่งสินค้าทางอากาศ"}</p>
     </div>
     <div className="service-cards">
      {topics.map((a,i)=><Reveal key={a.name} delay={i*95}><Link href={to(a.href,lang)} className="service-card">

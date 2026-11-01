@@ -249,3 +249,9 @@ h1 em,h2 em,h3 em{color:var(--red)}
 .home-main .home-hero.original-hero .home-quick-actions .home-quick-join{background:#e52b3d!important;color:#fff!important;border-color:#e52b3d!important}
 .home-main .home-hero.original-hero .home-quick-actions .home-quick-join :is(.home-quick-icon,.home-quick-chevron){color:#fff!important}
 @media(max-width:1000px){.home-main .home-hero.original-hero .home-hero-panel{width:100%!important}}
+
+/* Prevent a full-screen video from being animated/recomposited on route return. */
+.route-motion:has(> .home-main){animation:none!important;transform:none!important;opacity:1!important}
+.home-main .home-hero.original-hero .hero-video{animation:none!important;transform:none!important;transition:none!important;will-change:auto!important}
+.home-main .home-hero.original-hero .home-hero-panel{animation:none!important;transform:none!important;opacity:1!important}
+.home-main .home-hero.original-hero .home-hero-in{animation:none!important}
