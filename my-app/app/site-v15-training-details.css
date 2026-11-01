@@ -1,0 +1,66 @@
+/* ACBA Training V15 — below-banner only: internal learning pages and relocated knowledge. */
+.learning-topic-card .learning-topic-internal{display:block;color:inherit;text-decoration:none;outline-offset:5px}
+.learning-topic-card .learning-topic-internal:hover strong{color:#d52d40}
+.learning-topic-card .learning-topic-internal small{display:inline-block;color:#d52d40;font-size:12px;font-weight:750;margin-top:15px}
+.learning-explore{scroll-margin-top:115px}
+.training-insight{color:#23313a;background:#fff;min-height:75vh}
+.training-insight-header{padding-top:clamp(145px,15vw,198px);padding-bottom:clamp(62px,6vw,96px)}
+.training-insight-back{display:inline-flex;gap:12px;align-items:center;color:#596c77;font-size:12px;font-weight:750;border-bottom:1px solid #bac7d0;padding-bottom:7px;transition:color .2s}
+.training-insight-back:hover{color:#dd3144}
+.training-insight-back span{font-size:20px;color:#d53141}
+.training-insight-kicker{display:block;font-size:11px;font-weight:800;letter-spacing:.09em;color:#c73b49;margin:55px 0 20px}
+.training-insight h1{font-family:"Anuphan","Plus Jakarta Sans",sans-serif;font-size:clamp(52px,5.5vw,86px);line-height:1.23;letter-spacing:-.055em;font-weight:730;max-width:1020px;margin:0}
+.training-insight-subtitle{color:#667984;font-size:clamp(16px,1.6vw,21px);line-height:1.8;margin:22px 0 35px;max-width:850px}
+.training-insight-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #dfe7ec;border-bottom:1px solid #dfe7ec;gap:0}
+.training-insight-meta>div{padding:20px 22px 23px;border-right:1px solid #e5ebf0;min-width:0}
+.training-insight-meta>div:first-child{padding-left:0}
+.training-insight-meta>div:last-child{border-right:0}
+.training-insight-meta span{display:block;color:#81919b;font-size:10px;font-weight:800;letter-spacing:.08em;margin-bottom:10px}
+.training-insight-meta strong{font-size:clamp(16px,1.8vw,23px);line-height:1.55;font-weight:710;color:#293842;overflow-wrap:anywhere}
+.training-insight-layout{display:grid;grid-template-columns:minmax(180px,.34fr) minmax(0,1fr);gap:clamp(42px,7vw,116px);padding:75px 0 130px}
+.training-insight-side{align-self:start;position:sticky;top:140px}
+.training-insight-side>span{font-size:10px;letter-spacing:.12em;color:#c53746;font-weight:800}
+.training-insight-side ol{list-style:none;margin:20px 0;padding:0;border-top:1px solid #e1e8ed}
+.training-insight-side li{border-bottom:1px solid #e1e8ed}
+.training-insight-side li a{display:block;padding:17px 0;font-size:13px;line-height:1.75;color:#566a76;font-weight:650}
+.training-insight-side li a:hover{color:#d72d40}
+.training-insight-body{max-width:900px;min-width:0}
+.training-insight-lead{font-family:"Anuphan",sans-serif;font-size:clamp(18px,1.75vw,24px);line-height:1.95;color:#334650;margin:0 0 54px}
+.training-insight-section{display:grid;grid-template-columns:68px minmax(0,1fr);gap:24px;padding:33px 0 44px;border-top:1px solid #e3eaef;scroll-margin-top:125px}
+.training-insight-section-no{color:#0080ff;font-family:"Plus Jakarta Sans",sans-serif;font-size:20px;font-weight:750}
+.training-insight-section h2{font-family:"Anuphan",sans-serif;font-size:clamp(25px,2.5vw,37px);line-height:1.4;margin:0 0 24px;letter-spacing:-.04em}
+.training-insight-section ul{margin:0;padding-left:18px}
+.training-insight-section li{font-family:"Anuphan",sans-serif;color:#546a77;font-size:clamp(14px,1.15vw,16px);line-height:2;margin:0 0 15px}
+.training-insight-section li::marker{color:#df3143}
+.training-insight-notice{border-left:3px solid #e52b3d;background:#f5f9fd;padding:27px 30px;margin-top:20px;border-radius:0 14px 14px 0}
+.training-insight-notice strong{color:#26343e;font-size:16px}
+.training-insight-notice p{color:#5b707c;font-size:13px;line-height:1.9;margin:11px 0 0}
+.training-insight-notice .training-insight-reference{padding-top:12px;border-top:1px solid #dce6ee;font-size:11px}
+.training-insight-actions{display:flex;flex-wrap:wrap;gap:14px 25px;margin-top:36px}
+.training-insight-actions a{color:#c93140;border-bottom:1px solid currentColor;padding-bottom:5px;font-size:13px;font-weight:750}
+.training-insight-actions a:hover{color:#9d1f30}
+@media(max-width:850px){
+ .training-insight-header{padding-top:135px}
+ .training-insight-layout{grid-template-columns:1fr;gap:30px;padding-top:40px}
+ .training-insight-side{position:static}
+ .training-insight-side ol{display:flex;flex-wrap:wrap;gap:0 20px}
+ .training-insight-side li{border-bottom:0}
+ .training-insight-side li a{padding-block:11px}
+}
+@media(max-width:600px){
+ .training-insight-header{padding-top:120px;padding-bottom:45px}
+ .training-insight-kicker{margin-top:40px}
+ .training-insight h1{font-size:clamp(39px,9vw,58px)}
+ .training-insight-subtitle{font-size:16px}
+ .training-insight-meta{grid-template-columns:1fr}
+ .training-insight-meta>div,.training-insight-meta>div:first-child{padding:14px 0;border-right:0;border-bottom:1px solid #e4eaef}
+ .training-insight-meta>div:last-child{border-bottom:0}
+ .training-insight-meta strong{font-size:18px}
+ .training-insight-layout{padding-bottom:85px}
+ .training-insight-section{grid-template-columns:38px minmax(0,1fr);gap:14px;padding:26px 0}
+ .training-insight-section h2{font-size:25px}
+ .training-insight-section li{font-size:14px}
+ .training-insight-lead{font-size:18px;margin-bottom:33px}
+ .training-insight-notice{padding:23px 20px}
+}
+@media(prefers-reduced-motion:reduce){.training-insight *{transition:none!important}}

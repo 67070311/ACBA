@@ -1,0 +1,121 @@
+/* ACBA V8 — color system follows exact user reference: #0080FF.
+   Blue is an accent only. Large areas stay white or warm-neutral. */
+:root{--blue:#0080ff;--sky:#f5f9fc;--sky-strong:#0080ff;--soft:#f8f9fa;--paper:#fff;--line:#e5e9eb;--ink:#20272a;--sub:#7b858d;--red:#e62b3d;--red-dark:#c91d30}
+html{scroll-padding-top:104px}
+body{background:#fff;color:#20272a}
+.nav-v4 .header-cta,.action-button.button-v4,.learning-cta,.news-v6-outro-button{background:#e62b3d}
+.eyebrow-pill{color:#8d969e}
+.nav-v4 .desktop-menu a:hover,.nav-v4 .desktop-menu a.active{color:#d82538}
+.nav-v4 .language-switch a.selected{color:#e62b3d}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid #0080ff;outline-offset:4px}
+/* REDUCE LARGE BLUE FIELDS THROUGHOUT ALL PAGES */
+.home-impact,.home-editorial-brief,.learning-courses,.learning-v7-facts,.learning-wide-feature,.members-v7-topics,.member-industry-evidence,.members-evidence,.about-v7-focus,.about-sector-report,.about-ref-faq,.library-v8-collection,.news-v6-outro,.contact-registry-section,.contact-showcase-card,.join-information-grid>div,.join-hero{background:#f8f9fa!important}
+.home-impact{padding-block:105px}
+.impact-blue,.impact-black{background:#fff!important;color:#20272a!important;border:1px solid #e8edf0}
+.impact-black>small,.impact-black strong{color:#263239!important}
+.impact-black .arrow-link{color:#d42e3e!important}
+.impact-card{box-shadow:none}
+.impact-network-words{font-size:12px;letter-spacing:.12em;font-weight:800;color:#0080ff;padding-top:24px}
+.impact-network-words span{color:#d93445}
+.impact-simple{background:#fff;border:1px solid #e7ebee}
+.home-editorial-number strong span{color:#e62b3d}
+.home-editorial-entry:hover{background:#f7f9fb}
+.home-verified-card,.home-verified-card.main,.home-verified-card.accent{background:#fff}
+.home-quick-actions .home-quick-link{background:#fff}
+.about-v7-focus{background:#fafafa!important}
+.about-v7-switch-menu button{background:#fff;border:0;border-bottom:1px solid #e2e6e9;border-radius:14px}
+.about-v7-switch-menu button.active{background:#f2f4f6;border:0;border-left:3px solid #0080ff;box-shadow:none}
+.about-v7-switch-menu button:hover{transform:translateX(3px)}
+.about-v7-switch-photo{background:#edf0f2}
+.about-ref-narrative{background:#fff!important}
+.about-ref-citations span{background:#f1f3f4;color:#64717a}
+.about-ref-faq{background:#f8f9fa!important}
+.about-ref-fact{border-color:#e4e8eb}
+.about-ref-fact>svg{display:none}
+.about-sector-report{background:#fff!important;padding:72px 0!important}
+.about-sector-stat,.about-sector-stat.primary{background:#f7f8f9!important;border:1px solid #edf0f2;box-shadow:none;color:#1c262c!important}
+.about-sector-stat.primary>span,.about-sector-stat.primary p{color:#7f8c95!important}
+.about-sector-stat.primary strong{color:#d82f41}
+.about-v7-flow-step{background:#fff!important;border:0;border-top:1px solid #e3e7e9;border-radius:0;min-height:215px;padding:26px 14px}
+.about-v7-flow-step:hover{background:#fafafa!important;transform:translateY(-2px)}
+.about-v7-flow-step>span{color:#0080ff}
+.member-industry-evidence{background:#fff!important}
+.member-industry-table>a:hover{background:#f9fafb}
+.members-v7-topics{background:#fff!important;margin:0!important;padding:90px 0!important;border-radius:0!important}
+.members-directory-intro{padding-block:100px}
+.directory-status{background:#fff!important;border:0;border-left:3px solid #0080ff;border-radius:0;box-shadow:none;padding:10px 28px}
+.directory-icon{display:none!important}
+.members-banner-photo{height:270px}
+.members-journey{padding-block:100px}
+.member-step-icon{display:none!important}
+/* Forbidden card shape removed from all topics: replace icons-on-top with slim editorial rows */
+.learning-explore{padding-block:95px}
+.learning-topic-row{display:block!important;border-top:1px solid #e0e5e8}
+.learning-topic-row>.reveal-block{height:auto!important}
+.learning-topic-card{min-height:0!important;display:grid!important;grid-template-columns:100px 1fr 24px;gap:25px;align-items:start;border:0!important;border-bottom:1px solid #e0e5e8!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;padding:29px 10px!important;transition:padding .3s,background .3s}
+.learning-topic-card:hover{transform:none!important;background:#fafafa!important;padding-left:21px!important;box-shadow:none!important}
+.learning-topic-card .learning-topic-number{font-size:21px;font-weight:650;letter-spacing:-.06em;color:#0080ff}
+.learning-topic-card strong{display:block;font-size:clamp(21px,2.1vw,29px);line-height:1.25}
+.learning-topic-card p{margin:9px 0 0;color:#76818a;font-size:14px;line-height:1.85;max-width:790px}
+.learning-topic-card>.learning-topic-dash{height:2px;width:18px;background:#e62b3d;margin-top:9px}
+.learning-topic-icon{display:none!important}
+.learning-topic-card>small{display:none!important}
+.members-v7-role-grid{display:block!important;border-top:1px solid #e2e6e8}
+.members-v7-role-grid>.reveal-block{height:auto!important}
+.members-v7-role{display:grid!important;grid-template-columns:160px 1fr;gap:6px 25px;min-height:0!important;padding:27px 10px!important;border:0!important;border-bottom:1px solid #e2e6e8!important;background:#fff!important;border-radius:0!important;box-shadow:none!important}
+.members-v7-role:hover{transform:none!important;background:#fafafa!important;box-shadow:none!important}
+.members-v7-role>span{display:none!important}
+.members-v7-role>small{grid-row:1 / span 2;color:#0080ff;font-weight:750;font-size:11px;letter-spacing:.09em}
+.members-v7-role h3{font-size:clamp(20px,2.2vw,27px);margin:0!important;line-height:1.3}
+.members-v7-role p{grid-column:2;font-size:13px;line-height:1.85;margin:6px 0 0;color:#78838c;max-width:780px}
+.members-journey-steps{display:block!important;border-top:1px solid #e2e5e7}
+.members-journey-steps>.reveal-block{height:auto!important}
+.member-journey-item{min-height:0!important;display:grid!important;grid-template-columns:70px 1fr;gap:5px 20px;align-items:start;border:0!important;border-bottom:1px solid #e2e5e7!important;border-radius:0!important;background:#fff!important;padding:26px 10px!important}
+.member-journey-item h3{grid-column:2;margin:0!important}
+.member-journey-item p{grid-column:2;margin:0!important;color:#75838d}
+.member-step-number{grid-column:1;grid-row:1/span 2;color:#0080ff!important;font-size:16px;font-weight:700}
+.learning-courses{background:#f8f9fa!important}
+.course-item{border:1px solid #e8ebed;box-shadow:none}
+.course-item:hover{box-shadow:0 15px 35px rgba(23,35,43,.06)}
+.course-more{background:#f3f4f5;color:#e52e40}
+.course-browser-filters button.active{background:#e62b3d;border-color:#e62b3d}
+.learning-wide-feature{background:#f5f6f7!important}
+.learning-wide-badge{color:#e62b3d}
+.learning-topic-icon,.learning-tag-icon{display:none}
+.learning-hero-tag{background:#f8f8f8;color:#bd3343}
+.learning-floating-tag{background:#fff}
+.learning-v7-facts{background:#fff!important;border-top:1px solid #e9ecee;border-bottom:1px solid #e9ecee;border-radius:0!important;margin:0!important}
+.learning-v7-stats>div,.learning-v7-stats .learning-v7-stat-wide{background:#f7f8f9!important}
+.learning-v7-check{background:#fff!important;border-top:2px solid #0080ff!important;border-radius:0!important;border-bottom:1px solid #eceeef}
+.join-information-grid{display:block!important;border-top:1px solid #e5eaed}
+.join-information-grid>div{background:#fff!important;min-height:0!important;border-radius:0!important;display:grid!important;grid-template-columns:1fr 2fr;gap:10px 35px;padding:28px 8px!important;border-bottom:1px solid #e6eaec}
+.join-information-grid svg{display:none!important}
+.join-information-grid h3{grid-row:1/span 2;font-size:20px;margin:0}
+.join-information-grid p{font-size:13px;margin:0;color:#74818b}
+.join-information-grid a{grid-column:2;justify-self:start;font-size:11px;margin-top:8px}
+.contact-showcase-card{background:#fff!important;border:0;border-radius:0;border-bottom:2px solid #0080ff}
+.contact-icon-round{display:none}
+.contact-head-icon{background:#f5f6f7;color:#e12c3e}
+.contact-registry-section{background:#f7f8f9!important}
+.contact-records{box-shadow:none;border:1px solid #e5e8ec}
+.footer{background:#f7f8f9!important;color:#20272a;border-radius:0}
+.footer-menu a,.footer-menu p{color:#55616a}
+.footer-tagline em{color:#e12e40}
+.footer-legal{border-color:#e3e7e8}
+.news-v6-outro{background:#f7f8f9!important}
+.news-v6-cover-media .editorial-photo,.news-v6-float-visual .editorial-photo{filter:saturate(.85) hue-rotate(-8deg)}
+.news-v6-cover-shade{background:linear-gradient(90deg,rgba(24,26,29,.54),rgba(24,26,29,.03) 80%)}
+.news-v6-cover-copy h2 em{color:#fff!important}
+.news-v7-cover-button{background:#fff;color:#1d252b;box-shadow:0 14px 25px rgba(0,0,0,.1)}
+.news-v7-cover-icon{background:#f6f8fa!important;color:#0080ff}
+.news-v7-cover-label small{color:#818d96}
+.news-v6-cover-float{border:1px solid #fff}
+.news-journal-row:hover,.library-entry:hover{background:#f9fafb}
+.news-journal-tabs button.active{background:#e62b3d}
+.news-journal-meta span,.news-overline{color:#d73545}
+/* Exact blue accent remains sparse rather than filling blocks */
+.home-editorial-index,.library-v8-index{color:#0080ff}
+.directory-label,.library-v8-item-index{color:#0080ff}
+.about-v7-switch-number{color:#0080ff}
+.library-v8{background:#fff}
+.library-v8-collection{background:#fff!important}

@@ -1,0 +1,468 @@
+/* ACBA V19 — tablet / phone responsive finishing pass
+   Desktop layouts are retained. Breakpoints: 1180, 1024, 900, 760, 600, 430, 360.
+   Layouts adapt to intrinsic content; no viewport-wide overflow clipping.
+*/
+
+/* Shared guardrails: long names, multilingual typography and safe touch controls */
+:where(.home-main,.inner-page,.about-ref,.members-v4,.acba-activities,
+       .training-refresh,.training-insight,.library-v8,.library-detail,
+       .contact-v4,.news-v13,.news-v14-article,.acba-join-v2) {
+  min-width:0;
+}
+:where(.home-main,.inner-page) :is(p,h1,h2,h3,h4,strong,a,li,dd){
+  overflow-wrap:break-word;
+}
+:where(.home-main,.inner-page) :is(img,svg,video){max-width:100%}
+:where(.home-main,.inner-page) :is(button,a,input,select,textarea):focus-visible,
+.nav-v4 :is(button,a):focus-visible{
+  outline:2px solid #d42f43;
+  outline-offset:3px;
+}
+:where(.home-main,.inner-page) :is(input,select,textarea){max-width:100%;min-width:0}
+:where(.home-main,.inner-page) :is([id]){scroll-margin-top:110px}
+.site-wrap {min-width:0}
+
+/* Header — mobile navigation is purposeful and compact, not a 14-link wall */
+.nav-v4 .nav-inner{min-width:0}
+.nav-v4 .nav-end{flex:0 0 auto}
+.nav-v4 .site-logo{min-width:0}
+.nav-v4 .mobile-panel{box-sizing:border-box;max-height:min(76dvh,700px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;z-index:120}
+.nav-v4 .mobile-nav-row{display:flex;align-items:center;gap:6px;min-width:0}
+.nav-v4 .mobile-nav-row>a{flex:1;min-width:0;min-height:49px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #edf1f4}
+.nav-v4 .mobile-nav-row>a>span{font-size:14px;line-height:1.45;color:inherit;font-weight:650}
+.nav-v4 .mobile-nav-row svg{flex:none}
+.nav-v4 .mobile-nav-expand{flex:0 0 44px;width:44px;height:44px;display:grid;place-items:center;border:1px solid #e2e9ee;border-radius:12px;background:#f6f9fb;color:#556f80;cursor:pointer}
+.nav-v4 .mobile-nav-expand svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.nav-v4 .mobile-nav-expand[aria-expanded="true"]{color:#c62c40;background:#fff1f3;border-color:#f5d4db}
+.nav-v4 .mobile-nav-expand[aria-expanded="true"] svg{transform:rotate(180deg)}
+.nav-v4 .mobile-nav-children{display:none;padding:3px 0 8px 16px;border-left:2px solid #d8e5ed;margin:1px 0 8px 20px}
+.nav-v4 .mobile-nav-children.expanded{display:block}
+.nav-v4 .mobile-panel .mobile-nav-children .mobile-nav-child{display:flex;min-height:44px;align-items:center;line-height:1.65;padding:9px 13px;font-size:12px;border-bottom:1px solid #f1f4f6;color:#536b7a}
+.nav-v4 .mobile-panel .mobile-join-link{min-height:48px;margin-top:17px}
+.nav-v4 .mobile-panel .mobile-join{display:flex;min-height:44px;background:#f4f7f9;color:#344858;border:1px solid #e2e8ee;justify-content:center;border-radius:11px;padding:10px;margin-top:8px}
+
+/* iPad landscape: use spacious two-column sections but give copy enough room */
+@media(max-width:1180px){
+ .nav-v4 .desktop-menu{display:none}
+ .nav-v4 .mobile-trigger{display:flex}
+ .nav-v4 .nav-inner{width:100%;gap:clamp(8px,1.5vw,20px)}
+ .nav-v4 .mobile-panel{left:clamp(12px,2vw,28px);right:clamp(12px,2vw,28px);top:calc(100% + 5px)}
+ .nav-v4 .mobile-panel.shown{visibility:visible}
+ .site-wrap{width:calc(100% - clamp(48px,6vw,84px))}
+ .home-hero.original-hero .home-hero-panel{width:min(640px,76%)}
+ .home-main .home-services .service-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-main .home-services .service-cards>.reveal-block:last-child{grid-column:1/-1}
+ .home-main .home-services .service-cards>.reveal-block:last-child .service-card{min-height:300px}
+ .home-main .article-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .home-main .article-cards>.reveal-block:last-child{grid-column:1/-1}
+ .home-main .article-cards>.reveal-block:last-child .article-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:12px 24px}
+ .home-main .article-cards>.reveal-block:last-child .article-picture{grid-row:1 / span 5;height:100%;min-height:280px}
+ .home-main .article-cards>.reveal-block:last-child .article-card>p{min-height:0}
+ .members-v4 .members-v8-hero{gap:clamp(28px,4vw,50px)}
+ .acba-professional-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+ .acba-professional-item{min-height:238px}
+ .training-refresh .course-browser-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .training-refresh .learning-hero-copy h1{font-size:clamp(49px,5.6vw,76px)}
+ .training-refresh .learning-hero-visual{min-width:0}
+ .library-v8 .library-v8-header{gap:25px}
+ .contact-v4 .contact-registry-layout{gap:clamp(25px,5vw,60px)}
+ .acba-join-v2 .acba-join-hero{gap:35px}
+}
+
+/* iPad portrait: one strong column for editorial hero; two columns for compact cards */
+@media(max-width:1024px){
+ .nav-v4 .nav-inner{padding:8px 14px}
+ .nav-v4 .mobile-panel{padding:14px 18px;border-radius:18px}
+ .about-ref .about-ref-hero{grid-template-columns:1fr;min-height:0}
+ .about-ref .about-ref-intro{padding:35px clamp(22px,5vw,54px) 50px}
+ .about-ref .about-ref-photo{min-height:0}
+ .about-ref .about-ref-photo :is(img,.editorial-photo){object-fit:cover}
+ .about-ref .about-v7-focus-heading{margin-bottom:25px}
+ .about-ref .about-v7-switch-grid{min-height:0}
+ .about-ref .about-v7-switch-panel{height:auto;min-height:0}
+ .about-ref .about-v7-switch-photo{height:clamp(245px,36vw,355px)}
+ .members-v4 .members-v8-copy{min-height:0}
+ .members-v4 .members-v8-hero{grid-template-columns:1fr;gap:28px}
+ .members-v4 .members-v8-visual{height:clamp(320px,46vw,475px);border-radius:35px 22px 22px 22px}
+ .members-v4 .members-v8-footnote{margin-top:30px}
+ .members-v4 .members-directory-intro{grid-template-columns:1fr;gap:24px}
+ .acba-activities .acba-activities-hero{grid-template-columns:1fr;gap:18px;padding-top:clamp(92px,11vw,135px);padding-bottom:45px}
+ .acba-activities .acba-activity-row{grid-template-columns:118px minmax(0,1fr);gap:16px 28px}
+ .acba-activities .acba-activity-copy{grid-column:2}
+ .acba-activities .acba-activity-image{max-height:350px}
+ .training-refresh .learning-hero{grid-template-columns:1fr;gap:28px;padding-top:75px}
+ .training-refresh .learning-hero-visual{height:clamp(320px,45vw,480px);min-height:0}
+ .training-refresh .learning-hero-copy{max-width:770px}
+ .training-refresh .learning-hero-copy h1{font-size:clamp(52px,7.6vw,77px)}
+ .training-insight .training-insight-layout{grid-template-columns:minmax(170px,.32fr) minmax(0,1fr);gap:32px}
+ .library-detail .library-detail-grid{grid-template-columns:1fr;gap:28px}
+ .library-detail .library-detail-aside{position:static}
+ .contact-v4 .contact-registry-layout{grid-template-columns:1fr;gap:25px}
+ .contact-v4 .contact-registry-layout h2{max-width:820px}
+ .acba-join-v2 .acba-join-hero{grid-template-columns:1fr}
+ .acba-join-v2 .acba-join-hero-art{height:clamp(320px,42vw,420px);border-radius:25px}
+ .acba-join-v2 .acba-join-form-layout{grid-template-columns:1fr}
+ .acba-join-v2 .acba-join-form-side{position:static}
+ .acba-join-v2 .acba-join-form-side>p{max-width:800px}
+}
+
+/* Small tablets and large phones, 768–900 */
+@media(max-width:900px){
+ .site-wrap{width:calc(100% - 40px)}
+ .home-main .home-hero.original-hero .home-hero-panel{width:min(650px,100%)}
+ .home-main .home-intro.home-intro-v12{grid-template-columns:1fr;gap:20px;padding-block:65px}
+ .home-main .home-intro-v12-identity-inner{border-right:0;border-bottom:1px solid #e0e9ef;min-height:0;padding:0 0 30px}
+ .home-main .home-intro-v12-story-inner{padding:0}
+ .home-main .section-title{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+ .home-main .section-title>p{max-width:650px;margin:0}
+ .home-main .home-services{padding-bottom:78px}
+ .home-main .home-news{padding-block:72px}
+ .home-main .closing-band{grid-template-columns:1fr}
+ .home-main .closing-left{padding:clamp(30px,5vw,50px)}
+ .about-ref .about-archive-intro{grid-template-columns:1fr}
+ .about-ref .about-archive-content{min-width:0}
+ .about-ref .acba-scope-intent{grid-template-columns:1fr}
+ .about-ref .acba-scope-intent>div+div{border-left:0;border-top:1px solid #dde8ef}
+ .about-ref .acba-scope-leadership-inner{grid-template-columns:1fr}
+ .about-ref .about-scope-end{gap:24px}
+ .members-v4 .members-v8-hero{padding-top:65px;padding-bottom:50px}
+ .members-v4 .members-v8-copy h1{font-size:clamp(51px,8.5vw,85px)}
+ .members-v4 .acba-member-action-inner{gap:25px}
+ .training-refresh .course-browser-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .training-refresh .learning-hero-actions{gap:14px 22px}
+ .training-refresh .learning-section-heading{display:block}
+ .training-refresh .training-report-summary{grid-template-columns:1fr}
+ .training-refresh .training-report-courses{border-left:0;padding-left:0}
+ .training-insight .training-insight-layout{grid-template-columns:1fr;gap:24px;padding-block:45px 90px}
+ .training-insight .training-insight-side{position:static}
+ .training-insight .training-insight-side ol{display:flex;overflow-x:auto;gap:10px;scrollbar-width:thin;border:0;padding-bottom:8px}
+ .training-insight .training-insight-side li{border:1px solid #e1e8ed;border-radius:8px;flex:0 0 auto}
+ .training-insight .training-insight-side li a{padding:11px 15px;min-height:44px}
+ .training-insight .training-insight-meta{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .news-v14-article .news-v14-layout{grid-template-columns:1fr;gap:32px}
+ .news-v14-article .news-v14-sidebar{position:static}
+ .news-v14-article .news-v14-sidebar dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .news-v13 .news-v13-masthead{grid-template-columns:1fr;gap:22px;padding-top:100px}
+ .news-v13 .news-v13-lead{grid-template-columns:1fr;min-height:0}
+ .news-v13 .news-v13-lead-media{height:clamp(310px,45vw,420px);min-height:0}
+ .news-v13 .news-v13-lead-content{min-height:0}
+ .news-v13 .news-v13-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .library-v8 .library-v8-header{grid-template-columns:1fr;gap:24px}
+ .library-v8 .library-v8-cover-photo{height:clamp(300px,44vw,400px)}
+ .library-v8 .library-v8-controls{align-items:stretch}
+ .library-v8 .library-v8-search{width:100%;min-width:0}
+ .library-v8 .library-v8-search input{width:100%;font-size:16px}
+ .library-v8 .library-v8-filter{display:flex;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:thin;padding-bottom:7px;max-width:100%}
+ .library-v8 .library-v8-filter button{white-space:nowrap;min-height:44px;flex:0 0 auto}
+ .library-detail .library-detail-head{padding-top:95px;padding-bottom:40px}
+ .library-detail .library-detail-eyebrow{margin-top:30px}
+ .contact-v4 .contact-showcase{grid-template-columns:1fr;gap:0}
+ .contact-v4 .contact-showcase-photo{min-height:300px}
+ .contact-v4 .contact-next{grid-template-columns:1fr;gap:28px}
+ .contact-v4 .contact-head{padding-top:85px}
+ .acba-join-v2 .acba-join-doc-grid{grid-template-columns:1fr;gap:30px}
+ .acba-join-v2 .acba-join-value-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .acba-join-v2 .acba-join-value-grid article:last-child{grid-column:1/-1}
+ .acba-join-v2 .acba-join-step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* Phones: intentional single-column reading rhythm, consistent spacing and tap size */
+@media(max-width:760px){
+ .site-wrap{width:calc(100% - 34px)}
+ .nav-shell.nav-v4,.nav-shell.nav-v4.nav-scrolled{padding:7px 9px 0!important}
+ .nav-v4 .nav-inner{min-height:60px;padding:7px 10px;border-radius:999px;gap:8px}
+ .nav-v4 .site-logo img{width:38px;height:40px}
+ .nav-v4 .brand-text strong{font-size:19px}
+ .nav-v4 .brand-text small{display:none}
+ .nav-v4 .nav-end{gap:7px}
+ .nav-v4 .language-switch{padding:2px}
+ .nav-v4 .language-switch a{min-width:31px;height:32px;padding:0 4px}
+ .nav-v4 .mobile-trigger{height:43px;width:43px;flex:0 0 43px}
+ .nav-v4 .mobile-panel{top:calc(100% + 3px);left:9px;right:9px;max-height:calc(100dvh - 92px);padding:11px 14px;border-radius:18px}
+ .nav-v4 .header-contact-text{display:none}
+ .home-main .home-hero.original-hero{min-height:0;height:auto;max-height:none;padding:114px 0 62px;display:block}
+ body:has(.home-main > .home-hero.original-hero) .home-hero.original-hero{height:auto;min-height:0}
+ .home-main .home-hero.original-hero .home-hero-in{height:auto;padding-top:0;padding-bottom:0;display:block}
+ .home-main .home-hero.original-hero .home-hero-panel{width:100%;padding:clamp(23px,5.5vw,38px);border-radius:21px}
+ .home-main .home-hero.original-hero .home-hero-panel h1{font-size:clamp(42px,7.8vw,69px);line-height:1.1;letter-spacing:-.058em}
+ .home-main .home-hero.original-hero .hero-video{height:100%;object-fit:cover}
+ .home-main .home-hero.original-hero .hero-bottom-lineout{position:relative;margin-top:24px;bottom:auto;left:auto;right:auto}
+ .home-main .home-hero.original-hero .home-quick-actions{margin-top:25px!important;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px!important}
+ .home-main .home-hero.original-hero .home-quick-actions .home-quick-link{width:100%;min-width:0;min-height:49px;font-size:11px;grid-template-columns:20px minmax(0,1fr) 11px;gap:7px}
+ .home-main .home-hero.original-hero .home-quick-actions .home-quick-join{grid-column:1/-1}
+ .home-main .home-services .service-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+ .home-main .home-services .service-cards>.reveal-block:last-child{grid-column:1/-1}
+ .home-main .home-services .service-card{min-height:clamp(310px,45vw,400px);border-radius:20px}
+ .home-main .home-services .service-card-caption{left:18px;right:18px;bottom:18px}
+ .home-main .home-news{padding-block:65px}
+ .home-main .article-cards{grid-template-columns:1fr;gap:25px}
+ .home-main .article-cards>.reveal-block:last-child{grid-column:auto}
+ .home-main .article-cards>.reveal-block:last-child .article-card{display:block}
+ .home-main .article-cards>.reveal-block:last-child .article-picture{height:240px;min-height:0}
+ .home-main .article-picture{height:240px}
+ .home-main .closing-band{margin-bottom:27px}
+ .home-main .closing-left{padding:35px 23px}
+ .home-main .closing-art{height:225px}
+ .about-ref .about-ref-hero{margin:7px;width:calc(100% - 14px);border-radius:20px;overflow:hidden}
+ .about-ref .about-ref-intro{padding:26px 22px 40px}
+ .about-ref .about-ref-intro h1{font-size:clamp(47px,9vw,69px);line-height:1.15}
+ .about-ref .about-ref-photo{height:clamp(260px,52vw,385px)}
+ .about-ref .about-ref-actions{flex-wrap:wrap;gap:15px}
+ .about-ref .about-archive-intro{margin-bottom:28px}
+ .about-ref .about-archive-entry{min-height:0}
+ .about-ref .about-v7-focus{margin-inline:7px;border-radius:19px}
+ .about-ref .about-v7-switch-menu{grid-template-columns:1fr;gap:7px}
+ .about-ref .about-v7-switch-menu button{width:100%;min-height:66px;display:flex;flex-direction:row;align-items:center;padding:10px 14px}
+ .about-ref .about-v7-switch-panel{height:auto;min-height:0}
+ .about-ref .about-v7-switch-photo{height:245px}
+ .about-ref .about-v7-switch-text{padding:22px}
+ .about-ref .acba-scope-core{padding-block:62px}
+ .about-ref .acba-scope-heading h2{font-size:clamp(34px,7vw,48px)}
+ .about-ref .acba-scope-leadership{padding-block:60px}
+ .about-ref .about-scope-end{flex-direction:column;align-items:flex-start;padding-block:65px}
+ .members-v4 .members-v8-hero{padding-block:54px;gap:27px}
+ .members-v4 .members-v8-copy h1{font-size:clamp(46px,9.3vw,68px);line-height:1.14}
+ .members-v4 .members-v8-visual{height:clamp(245px,53vw,350px);border-radius:24px 15px 15px 15px}
+ .members-v4 .members-v8-hero-actions{gap:12px 19px}
+ .members-v4 .members-v8-hero-actions>a{font-size:12px}
+ .members-v4 .members-directory-intro{padding-block:59px;gap:22px}
+ .members-v4 .members-directory-intro h2{font-size:clamp(33px,7vw,46px)}
+ .members-v4 .directory-status{padding:22px}
+ .members-v4 .acba-member-action{padding-block:55px}
+ .members-v4 .acba-member-action-inner{flex-direction:column;align-items:flex-start;gap:15px}
+ .members-v4 .acba-member-context{padding-block:59px}
+ .acba-activities .acba-activities-hero{padding-top:108px;padding-bottom:39px}
+ .acba-activities h1{font-size:clamp(49px,9vw,72px)}
+ .acba-activities .acba-activity-row{grid-template-columns:1fr;gap:15px;padding:29px 0}
+ .acba-activities .acba-activity-date{flex-direction:row;align-items:center;gap:16px}
+ .acba-activities .acba-activity-image{max-height:none;aspect-ratio:1.5}
+ .acba-activities .acba-activity-copy{grid-column:auto}
+ .acba-activities .acba-activity-copy h2{font-size:clamp(23px,5vw,32px)}
+ .acba-activities .acba-activities-bottom{flex-direction:column;align-items:flex-start;padding-block:54px}
+ .training-refresh .learning-hero{padding-block:65px 48px;gap:25px}
+ .training-refresh .learning-hero-copy h1{font-size:clamp(44px,8.8vw,64px);line-height:1.15}
+ .training-refresh .learning-hero-visual{height:clamp(245px,60vw,355px);min-height:0}
+ .training-refresh .learning-image-main{width:88%;height:89%}
+ .training-refresh .learning-image-mini{width:43%;height:43%}
+ .training-refresh .learning-hero-actions{gap:13px 18px}
+ .training-refresh .learning-hero-actions a{min-height:44px;display:inline-flex;align-items:center}
+ .training-refresh .learning-courses{margin:0 8px;border-radius:18px;padding-block:60px}
+ .training-refresh .course-browser-grid{grid-template-columns:1fr;gap:15px}
+ .training-refresh .course-item-img{height:225px}
+ .training-refresh .course-browser-filters{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:7px;scrollbar-width:thin;max-width:100%;padding-bottom:8px}
+ .training-refresh .course-browser-filters button{min-height:44px;white-space:nowrap;flex:0 0 auto}
+ .training-refresh .learning-explore{padding-block:65px}
+ .training-refresh .learning-topic-card{grid-template-columns:42px minmax(0,1fr)!important;gap:15px}
+ .training-refresh .training-report{padding-block:60px}
+ .training-refresh .training-before{padding-block:65px}
+ .acba-professional{padding-block:60px}
+ .acba-professional-heading{grid-template-columns:1fr;gap:12px}
+ .acba-professional-grid{grid-template-columns:1fr}
+ .acba-professional-item{min-height:0;padding:22px}
+ .acba-professional-item h3{font-size:22px;margin-top:16px}
+ .training-insight .training-insight-header{padding-top:104px;padding-bottom:34px}
+ .training-insight .training-insight-kicker{margin-top:28px}
+ .training-insight h1{font-size:clamp(37px,7.8vw,58px)}
+ .training-insight .training-insight-subtitle{font-size:16px;margin-bottom:25px}
+ .training-insight .training-insight-meta{grid-template-columns:1fr}
+ .training-insight .training-insight-meta>div{border-right:0;border-bottom:1px solid #e5ebf0;padding:14px 0}
+ .training-insight .training-insight-meta>div:last-child{border-bottom:0}
+ .training-insight .training-insight-layout{padding-block:27px 65px}
+ .training-insight .training-insight-section{grid-template-columns:38px minmax(0,1fr);gap:11px;padding:25px 0 30px}
+ .training-insight .training-insight-section h2{font-size:clamp(23px,5vw,31px)}
+ .training-insight .training-insight-notice{padding:21px 18px}
+ .news-v13 .news-v13-masthead{padding-top:99px;padding-bottom:30px}
+ .news-v13 .news-v13-masthead h1{font-size:clamp(48px,9vw,70px)}
+ .news-v13 .news-v13-lead-media{height:clamp(225px,49vw,340px)}
+ .news-v13 .news-v13-lead-content{padding:24px}
+ .news-v13 .news-v13-lead-content h2{font-size:clamp(29px,5.3vw,40px)}
+ .news-v13 .news-v13-toolbar{flex-direction:column;align-items:stretch;gap:14px}
+ .news-v13 .news-v13-filters{overflow-x:auto;flex-wrap:nowrap;max-width:100%;padding-bottom:5px;scrollbar-width:thin}
+ .news-v13 .news-v13-filters button{min-height:44px;white-space:nowrap;flex:0 0 auto}
+ .news-v13 .news-v13-search{width:100%;min-width:0}
+ .news-v13 .news-v13-search input{width:100%;min-width:0;font-size:16px}
+ .news-v13 .news-v13-grid{grid-template-columns:1fr;row-gap:30px}
+ .news-v13 .news-v13-end-inner{flex-direction:column;align-items:flex-start;gap:22px}
+ .news-v14-article .news-v14-header{padding-top:102px;padding-bottom:37px}
+ .news-v14-article .news-v14-category{margin-top:30px}
+ .news-v14-article .news-v14-header h1{font-size:clamp(38px,7.2vw,59px)}
+ .news-v14-article .news-v14-figure{height:clamp(235px,57vw,360px);border-radius:17px}
+ .news-v14-article .news-v14-layout{padding-top:38px;padding-bottom:75px}
+ .news-v14-article .news-v14-attribution{padding:22px}
+ .library-v8 .library-v8-cover{padding-top:65px;padding-bottom:25px}
+ .library-v8 .library-v8-heading h1{font-size:clamp(48px,8.7vw,70px);line-height:1.15}
+ .library-v8 .library-v8-cover-photo{height:clamp(240px,52vw,355px);border-radius:17px}
+ .library-v8 .library-v8-collection{padding-block:63px}
+ .library-v8 .library-v8-glossary{padding-block:63px}
+ .library-v8 .library-v8-items .library-v8-item{grid-template-columns:35px minmax(0,1fr);gap:12px;padding:22px 0}
+ .library-v8 .library-v8-item-link{grid-column:2;justify-self:start}
+ .library-v8 .library-v8-definitions summary{grid-template-columns:1fr 25px;gap:6px}
+ .library-v8 .library-v8-definitions summary strong{grid-row:2;grid-column:1}
+ .library-v8 .library-v8-definitions summary b{grid-column:2;grid-row:1 / span 2}
+ .library-v8 .library-v8-definitions details>div{margin:0 0 20px}
+ .library-detail .library-detail-head{padding-top:100px;padding-bottom:35px}
+ .library-detail .library-detail-head h1{font-size:clamp(36px,7.9vw,56px)}
+ .library-detail .library-detail-grid{padding-top:29px;padding-bottom:72px}
+ .library-detail .library-detail-point{grid-template-columns:32px minmax(0,1fr);gap:13px}
+ .library-detail .library-detail-source{padding:21px}
+ .contact-v4 .contact-head{padding-top:85px}
+ .contact-v4 .contact-head h1{font-size:clamp(49px,9vw,75px);line-height:1.14}
+ .contact-v4 .contact-showcase{grid-template-columns:1fr}
+ .contact-v4 .contact-showcase-photo{min-height:250px;height:clamp(250px,56vw,380px)}
+ .contact-v4 .contact-showcase-card{padding:clamp(23px,5vw,40px)}
+ .contact-v4 .contact-next{padding-block:65px}
+ .contact-v4 .contact-next-links{min-width:0}
+ .contact-v4 .contact-registry-section{margin:0 8px;border-radius:18px;padding-block:63px}
+ .contact-v4 .contact-records{min-width:0}
+ .contact-v4 .contact-records strong{overflow-wrap:anywhere}
+ .contact-v4 .contact-support-faq{padding-block:65px}
+ .acba-join-v2 .acba-join-hero{padding-block:55px 24px}
+ .acba-join-v2 .acba-join-hero h1{font-size:clamp(48px,8.4vw,70px)}
+ .acba-join-v2 .acba-join-hero-art{height:clamp(240px,56vw,350px)}
+ .acba-join-v2 .acba-join-anchor{gap:12px 20px}
+ .acba-join-v2 .acba-join-overview,.acba-join-v2 .acba-join-steps{padding-block:65px}
+ .acba-join-v2 .acba-join-value-grid{grid-template-columns:1fr}
+ .acba-join-v2 .acba-join-value-grid article:last-child{grid-column:auto}
+ .acba-join-v2 .acba-join-step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .acba-join-v2 .acba-join-form-section{padding-block:65px}
+ .acba-join-v2 .acba-join-form-card{padding:25px}
+ .acba-join-v2 .acba-join-final{padding-block:59px}
+ .footer-layout{grid-template-columns:1fr 1fr;gap:32px}
+ .footer-brand{grid-column:1/-1}
+ .footer-legal{flex-wrap:wrap}
+}
+
+/* Smaller phones 320–600px: legible copy, no three-card squeeze or hidden CTA */
+@media(max-width:600px){
+ .site-wrap{width:calc(100% - 30px)}
+ .nav-v4 .nav-inner{gap:6px;padding:6px 9px}
+ .nav-v4 .site-logo{gap:5px}
+ .nav-v4 .site-logo img{width:34px;height:35px}
+ .nav-v4 .brand-text strong{font-size:17px}
+ .nav-v4 .header-join-cta{display:none}
+ .nav-v4 .language-switch{margin-left:auto}
+ .nav-v4 .language-switch a{min-width:30px;height:31px;font-size:10px}
+ .nav-v4 .mobile-trigger{height:42px;width:42px;flex-basis:42px}
+ .nav-v4 .mobile-panel{left:8px;right:8px;max-height:calc(100dvh - 87px)}
+ .home-main .home-hero.original-hero{padding-top:103px;padding-bottom:38px}
+ .home-main .home-hero.original-hero .home-hero-panel{padding:22px 19px}
+ .home-main .home-hero.original-hero .home-hero-panel h1{font-size:clamp(38px,9vw,53px);letter-spacing:-.055em;margin-block:18px}
+ .home-main .home-hero.original-hero .home-hero-panel>p{font-size:13px;line-height:1.8}
+ .home-main .home-hero.original-hero .home-quick-actions{grid-template-columns:1fr;gap:8px!important}
+ .home-main .home-hero.original-hero .home-quick-actions .home-quick-link{width:100%;min-height:48px;font-size:12px}
+ .home-main .home-intro.home-intro-v12{padding-block:50px}
+ .home-main .home-services .service-cards{grid-template-columns:1fr;gap:13px}
+ .home-main .home-services .service-cards>.reveal-block:last-child{grid-column:auto}
+ .home-main .home-services .service-card{min-height:345px}
+ .home-main .home-services{padding-bottom:58px}
+ .home-main .section-title h2{font-size:clamp(34px,8.2vw,52px);line-height:1.19}
+ .home-main .article-cards .article-card h3{font-size:22px;line-height:1.44}
+ .home-main .closing-left h2{font-size:clamp(34px,8.4vw,52px)}
+ .about-ref .about-ref-intro h1{font-size:clamp(43px,10vw,56px)}
+ .about-ref .about-archive-intro h2{font-size:clamp(39px,9vw,56px)}
+ .about-ref .about-archive-photo,.about-ref .about-archive-document{max-width:100%}
+ .about-ref .about-v7-focus-heading h2{font-size:clamp(33px,8vw,44px)}
+ .about-ref .about-v7-switch-menu button{min-height:57px}
+ .about-ref .about-v7-switch-photo{height:215px}
+ .about-ref .acba-scope-intent h3{font-size:21px}
+ .about-ref .acba-scope-leadership h2{font-size:clamp(30px,7.8vw,39px)}
+ .members-v4 .members-v8-hero{padding-top:45px}
+ .members-v4 .members-v8-copy h1{font-size:clamp(42px,10vw,61px)}
+ .members-v4 .members-v8-hero-actions{align-items:flex-start;flex-direction:column;gap:16px}
+ .members-v4 .members-v8-hero-actions>a:first-child{min-height:48px}
+ .members-v4 .members-v8-visual{height:250px}
+ .members-v4 .members-directory-intro h2{font-size:clamp(31px,7.7vw,42px)}
+ .members-v4 .acba-member-action-inner>a{width:100%;text-align:center;min-height:47px}
+ .training-refresh .learning-hero-copy h1{font-size:clamp(39px,9vw,53px)}
+ .training-refresh .learning-hero-visual{height:255px}
+ .training-refresh .learning-hero-actions{align-items:flex-start}
+ .training-refresh .learning-hero-actions .learning-cta{width:100%;justify-content:center}
+ .training-refresh .course-item-img{height:200px}
+ .training-refresh .training-report-total-value strong{font-size:clamp(85px,23vw,125px)}
+ .training-insight h1{font-size:clamp(35px,8.4vw,49px)}
+ .training-insight .training-insight-section{grid-template-columns:30px minmax(0,1fr);gap:10px}
+ .training-insight .training-insight-section h2{font-size:clamp(22px,6vw,29px)}
+ .news-v13 .news-v13-masthead h1{font-size:clamp(43px,10vw,59px)}
+ .news-v13 .news-v13-lead-media{height:240px}
+ .news-v13 .news-v13-lead h2{font-size:clamp(27px,7vw,36px)}
+ .news-v13 .news-v13-lead-content{padding:20px}
+ .news-v14-article .news-v14-header h1{font-size:clamp(36px,9vw,52px)}
+ .news-v14-article .news-v14-sidebar dl{grid-template-columns:1fr}
+ .news-v14-article .news-v14-attribution{padding:20px}
+ .library-v8 .library-v8-heading h1{font-size:clamp(42px,10vw,62px)}
+ .library-v8 .library-v8-cover-photo{height:240px}
+ .library-v8 .library-v8-section-heading h2,.library-v8 .library-v8-glossary-head h2{font-size:clamp(32px,8vw,44px)}
+ .library-v8 .library-v8-list-meta{flex-wrap:wrap}
+ .library-v8 .library-v8-cover-bottom{gap:8px;flex-wrap:wrap}
+ .library-detail .library-detail-head h1{font-size:clamp(35px,8.4vw,48px)}
+ .contact-v4 .contact-head h1{font-size:clamp(41px,10vw,57px)}
+ .contact-v4 .contact-showcase-photo{height:250px}
+ .contact-v4 .contact-next-links a{min-height:50px}
+ .contact-v4 .contact-registry-layout h2{font-size:clamp(32px,8vw,43px)}
+ .acba-join-v2 .acba-join-hero h1{font-size:clamp(45px,10vw,57px)}
+ .acba-join-v2 .acba-join-hero-art{height:240px}
+ .acba-join-v2 .acba-join-anchor{gap:13px}
+ .acba-join-v2 .acba-join-field-grid{grid-template-columns:1fr}
+ .acba-join-v2 .acba-join-form-card{padding:22px 17px}
+ .acba-join-v2 .acba-join-step-grid{grid-template-columns:1fr}
+ .acba-join-v2 .acba-join-primary{width:100%;justify-content:space-between}
+ .acba-join-v2 .acba-join-doc-section{margin:0 8px}
+ .acba-join-v2 .acba-join-doc-list>div{grid-template-columns:27px minmax(0,1fr);gap:7px 10px}
+ .acba-join-v2 .acba-join-doc-list small{grid-column:2}
+ .footer-layout{grid-template-columns:1fr;gap:35px}
+ .footer-brand{grid-column:1}
+ .footer-menu{min-width:0}
+ .footer-legal{display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+}
+
+/* Compact iPhone / 320px: always preserve logo, language, menu and readable cards */
+@media(max-width:430px){
+ .site-wrap{width:calc(100% - 26px)}
+ .nav-v4 .nav-inner{padding-inline:8px}
+ .nav-v4 .site-logo img{width:32px;height:33px}
+ .nav-v4 .brand-text strong{font-size:16px}
+ .nav-v4 .language-switch a{min-width:28px;padding-inline:3px}
+ .nav-v4 .mobile-trigger{width:40px;flex-basis:40px;height:40px}
+ .home-main .home-hero.original-hero .home-hero-panel h1{font-size:clamp(35px,9.5vw,42px)}
+ .home-main .home-hero.original-hero .hero-kicker{font-size:9px;letter-spacing:.05em}
+ .about-ref .about-ref-intro h1{font-size:clamp(40px,10.8vw,48px)}
+ .members-v4 .members-v8-copy h1{font-size:clamp(38px,10.3vw,49px)}
+ .acba-activities h1{font-size:clamp(40px,11vw,55px)}
+ .training-refresh .learning-hero-copy h1{font-size:clamp(35px,9.4vw,45px)}
+ .news-v13 .news-v13-masthead h1{font-size:clamp(39px,10.4vw,51px)}
+ .library-v8 .library-v8-heading h1{font-size:clamp(39px,10.4vw,52px)}
+ .contact-v4 .contact-head h1{font-size:clamp(38px,10vw,50px)}
+ .acba-join-v2 .acba-join-hero h1{font-size:clamp(39px,10.2vw,50px)}
+ .acba-join-v2 .acba-join-form-card{padding:19px 14px}
+}
+
+@media(max-width:360px){
+ .nav-v4 .brand-text strong{font-size:15px}
+ .nav-v4 .nav-end{gap:3px}
+ .nav-v4 .language-switch a{min-width:27px;height:29px;font-size:9px}
+ .nav-v4 .mobile-trigger{width:39px;flex-basis:39px}
+ .nav-v4 .site-logo img{width:30px;height:32px}
+ .nav-v4 .mobile-panel{padding:10px 11px}
+ .home-main .home-hero.original-hero .home-hero-panel{padding:20px 15px}
+ .home-main .home-hero.original-hero .home-hero-panel h1{font-size:33px}
+ .training-insight .training-insight-notice,.library-detail .library-detail-source{padding:17px 14px}
+}
+
+/* iPad landscape and small-height phones: menus cannot spill below screen */
+@media(max-height:520px) and (max-width:1180px){
+ .nav-v4 .mobile-panel{max-height:calc(100dvh - 78px)}
+ .home-main .home-hero.original-hero{min-height:0}
+}
+
+/* Touch-first: no hover-only movement. Animation remains opt-out safe. */
+@media(hover:none){
+ .home-main .service-card:hover,.home-main .article-card:hover,
+ .acba-activities .acba-activity-row:hover,
+ .news-v13 .news-v13-lead:hover,.news-v13 .news-v13-card:hover,
+ .acba-join-v2 .acba-join-primary:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .nav-v4 .mobile-nav-expand svg{transition:none}
+ .home-main .home-hero-panel{animation:none}
+ .about-ref .about-archive-content{opacity:1!important;transform:none!important}
+}

@@ -1,0 +1,138 @@
+/* V23 — business category picker and cleaned Back navigation.
+   Standalone details keep Back; pages reachable from site nav do not. */
+.acba-join-v2 .acba-business-field{
+ display:flex;
+ flex-direction:column;
+ gap:9px;
+ min-width:0;
+ position:relative;
+}
+.acba-join-v2 .acba-business-label{
+ font:700 12px/1.6 "Anuphan","Plus Jakarta Sans",sans-serif;
+ color:#526674;
+}
+.acba-join-v2 .acba-business-select{
+ position:relative;
+ min-width:0;
+}
+.acba-join-v2 .acba-business-select.is-open{z-index:40}
+.acba-join-v2 .acba-business-trigger{
+ width:100%;
+ min-width:0;
+ min-height:48px;
+ padding:11px 13px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:9px;
+ text-align:left;
+ background:#f9fbfc;
+ border:1px solid #dce6ec;
+ border-radius:9px!important;
+ color:#2a404d;
+ font:550 13px/1.6 "Anuphan","Plus Jakarta Sans",sans-serif;
+ cursor:pointer;
+ transition:background .16s,border-color .16s,box-shadow .16s;
+}
+.acba-join-v2 .acba-business-value{flex:1;min-width:0;overflow-wrap:anywhere}
+.acba-join-v2 .acba-business-value.is-placeholder{color:#94a4ae}
+.acba-join-v2 .acba-business-trigger>svg{
+ flex:0 0 18px;
+ width:18px;
+ height:18px;
+ fill:none;
+ stroke:#667c89;
+ stroke-width:1.8;
+ stroke-linecap:round;
+ stroke-linejoin:round;
+ transition:transform .2s;
+}
+.acba-join-v2 .acba-business-select.is-open .acba-business-trigger{
+ border-color:#bfcfd9;
+ background:#fff;
+ box-shadow:0 0 0 3px rgba(47,102,142,.08);
+}
+.acba-join-v2 .acba-business-select.is-open .acba-business-trigger>svg{
+ transform:rotate(180deg);
+}
+.acba-join-v2 .acba-business-trigger:focus-visible{
+ outline:2px solid #bd3045;
+ outline-offset:3px;
+}
+.acba-join-v2 .acba-business-select.is-invalid .acba-business-trigger{
+ border-color:#d82e46;
+ background:#fff9fa;
+}
+.acba-join-v2 .acba-business-options{
+ position:absolute;
+ top:calc(100% + 7px);
+ left:0;
+ right:0;
+ min-width:0;
+ z-index:45;
+ display:flex;
+ flex-direction:column;
+ gap:3px;
+ padding:7px;
+ max-height:min(300px,45dvh);
+ overflow-y:auto;
+ overscroll-behavior:contain;
+ scrollbar-width:thin;
+ background:#fff;
+ border:1px solid #dbe4e9;
+ border-radius:12px;
+ box-shadow:0 18px 42px rgba(31,49,65,.14);
+}
+.acba-join-v2 .acba-business-option{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:10px;
+ min-height:43px;
+ padding:10px 12px;
+ background:#fff;
+ border:1px solid transparent;
+ border-radius:7px!important;
+ color:#304654;
+ text-align:left;
+ font:600 12px/1.55 "Anuphan","Plus Jakarta Sans",sans-serif;
+ cursor:pointer;
+}
+.acba-join-v2 .acba-business-option>span{flex:1;min-width:0;overflow-wrap:anywhere}
+.acba-join-v2 .acba-business-option>svg{
+ width:17px;
+ height:17px;
+ flex:0 0 17px;
+ fill:none;
+ stroke:#c42b40;
+ stroke-width:2;
+ stroke-linecap:round;
+ stroke-linejoin:round;
+}
+.acba-join-v2 .acba-business-option:hover,
+.acba-join-v2 .acba-business-option:focus-visible{
+ color:#b9283d;
+ background:#fff2f4;
+ border-color:#f8e1e5;
+ outline:0;
+}
+.acba-join-v2 .acba-business-option.is-selected{
+ color:#bd2840;
+ background:#fff3f5;
+ font-weight:800;
+}
+.acba-join-v2 .acba-business-error{
+ font-size:11px;
+ line-height:1.6;
+ color:#cc283f;
+ font-weight:650;
+}
+@media(max-width:760px){
+ .acba-join-v2 .acba-business-trigger{min-height:49px;font-size:14px}
+ .acba-join-v2 .acba-business-options{max-height:min(270px,40dvh);padding:6px}
+ .acba-join-v2 .acba-business-option{font-size:12px;min-height:46px}
+}
+@media(prefers-reduced-motion:reduce){
+ .acba-join-v2 .acba-business-trigger,
+ .acba-join-v2 .acba-business-trigger>svg{transition:none}
+}

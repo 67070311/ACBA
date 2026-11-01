@@ -1,0 +1,258 @@
+/* V21 About hero — full-bleed, cinematic and restrained.
+   Pexels image credited in component; not presented as an ACBA event photo. */
+.about-ref .about-ref-hero.about-hero-full{
+ width:100%;
+ max-width:none;
+ margin:0;
+ padding:0;
+ min-height:clamp(650px,100svh,1000px);
+ height:auto;
+ display:block;
+ position:relative;
+ isolation:isolate;
+ border:none;
+ border-radius:0;
+ box-shadow:none;
+ overflow:hidden;
+ background:#142b3d;
+}
+.about-ref .about-hero-full .about-ref-photo{
+ position:absolute!important;
+ inset:0!important;
+ z-index:0;
+ width:100%;
+ height:100%!important;
+ min-height:0!important;
+ max-height:none!important;
+ flex:auto;
+ overflow:hidden;
+ background:#1a2c3b;
+}
+.about-ref .about-hero-full .about-panorama-clean{
+ position:absolute!important;
+ inset:0!important;
+ display:block;
+ width:100%;
+ height:100%!important;
+ min-height:0!important;
+ max-height:none!important;
+ flex:auto!important;
+}
+.about-ref .about-hero-full .about-panorama-clean-image{
+ display:block;
+ width:100%;
+ height:100%;
+ max-height:none;
+ object-fit:cover;
+ object-position:57% 50%;
+ filter:saturate(.92);
+}
+.about-ref .about-hero-full .about-hero-overlay{
+ position:absolute;
+ inset:0;
+ z-index:1;
+ background:
+  linear-gradient(90deg,rgba(5,19,33,.88) 0%,rgba(8,26,43,.74) 34%,rgba(13,33,49,.30) 70%,rgba(12,28,39,.12) 100%),
+  linear-gradient(0deg,rgba(4,16,28,.52) 0%,transparent 32%,rgba(8,20,32,.11) 100%);
+ pointer-events:none;
+}
+.about-ref .about-hero-full .about-ref-intro{
+ position:relative!important;
+ z-index:2;
+ width:min(1400px,calc(100% - 112px));
+ max-width:none;
+ min-height:clamp(650px,100svh,1000px);
+ height:auto!important;
+ padding:125px 0 104px!important;
+ margin:0 auto;
+ display:flex!important;
+ flex-direction:column;
+ align-items:flex-start;
+ justify-content:center;
+ gap:0;
+ background:transparent;
+ color:#fff;
+}
+.about-ref .about-hero-full .about-hero-eyebrow{
+ display:block;
+ max-width:100%;
+ color:rgba(255,255,255,.79);
+ font-family:"Plus Jakarta Sans","Anuphan",sans-serif;
+ font-size:11px;
+ letter-spacing:.15em;
+ font-weight:750;
+ line-height:1.7;
+}
+.about-ref .about-hero-full .about-ref-intro h1{
+ color:#fff;
+ font-family:"Anuphan","Plus Jakarta Sans",sans-serif;
+ font-size:clamp(68px,7.2vw,116px);
+ font-weight:740;
+ letter-spacing:-.077em;
+ line-height:1.1;
+ margin:23px 0 22px;
+ text-wrap:balance;
+ text-shadow:0 4px 28px rgba(7,24,36,.14);
+}
+.about-ref .about-hero-full .about-ref-intro h1 em{
+ color:#fff;
+ font-weight:450;
+ font-style:normal;
+}
+.about-ref .about-hero-full .about-hero-dot{color:#ff4359;font-weight:750}
+.about-ref .about-hero-full .about-ref-intro>p{
+ color:rgba(255,255,255,.88);
+ font-size:clamp(14px,1.15vw,17px);
+ line-height:1.95;
+ max-width:590px;
+ margin:0;
+ text-wrap:pretty;
+}
+.about-ref .about-hero-full .about-ref-actions{margin-top:32px;gap:0}
+.about-ref .about-hero-full .about-ref-actions .action-button{
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ min-height:51px;
+ padding:13px 22px;
+ font-size:13px;
+ border-radius:9px!important;
+ color:#243744;
+ background:#fff;
+ box-shadow:0 8px 28px rgba(0,0,0,.14);
+}
+.about-ref .about-hero-full .about-ref-actions .action-button:hover{
+ color:#d92c41;
+ background:#f5f8fa;
+}
+.about-ref .about-hero-full .about-hero-credit{
+ position:absolute;
+ z-index:2;
+ right:clamp(20px,3.7vw,66px);
+ bottom:27px;
+ color:rgba(255,255,255,.78);
+ font:600 10px "Plus Jakarta Sans","Anuphan",sans-serif;
+ letter-spacing:.015em;
+ text-decoration:none;
+}
+.about-ref .about-hero-full .about-hero-credit:hover{color:#fff;text-decoration:underline}
+@media(max-width:1024px){
+ .about-ref .about-ref-hero.about-hero-full{
+  min-height:clamp(620px,94svh,850px);
+  margin:0!important;
+  width:100%!important;
+  border-radius:0!important;
+  display:block!important;
+ }
+ .about-ref .about-hero-full .about-ref-photo{
+  height:100%!important;
+  flex:none!important;
+ }
+ .about-ref .about-hero-full .about-panorama-clean{
+  height:100%!important;
+  flex:none!important;
+ }
+ .about-ref .about-hero-full .about-hero-overlay{
+  background:
+   linear-gradient(90deg,rgba(6,20,34,.85),rgba(8,25,42,.45) 82%),
+   linear-gradient(0deg,rgba(6,21,36,.55),transparent 55%);
+ }
+ .about-ref .about-hero-full .about-ref-intro{
+  min-height:clamp(620px,94svh,850px);
+  width:calc(100% - 72px);
+  padding:120px 0 95px!important;
+ }
+ .about-ref .about-hero-full .about-ref-intro h1{
+  font-size:clamp(65px,9.5vw,94px);
+  margin:20px 0;
+ }
+}
+@media(max-width:600px){
+ .about-ref .about-ref-hero.about-hero-full{
+  height:clamp(550px,72svh,680px);
+  min-height:0!important;
+  margin:0!important;
+  width:100%!important;
+  border-radius:0!important;
+  box-shadow:none;
+ }
+ .about-ref .about-hero-full .about-ref-photo{
+  position:absolute!important;
+  inset:0!important;
+  height:100%!important;
+  min-height:0!important;
+  flex:none!important;
+ }
+ .about-ref .about-hero-full .about-panorama-clean{
+  position:absolute!important;
+  inset:0!important;
+  width:100%;
+  height:100%!important;
+  min-height:0!important;
+  flex:none!important;
+ }
+ .about-ref .about-hero-full .about-panorama-clean-image{object-position:60% 43%}
+ .about-ref .about-hero-full .about-hero-overlay{
+  background:
+   linear-gradient(90deg,rgba(6,22,38,.78),rgba(7,24,40,.48)),
+   linear-gradient(0deg,rgba(4,17,31,.8) 0%,rgba(8,25,42,.36) 65%,rgba(8,25,42,.25) 100%);
+ }
+ .about-ref .about-hero-full .about-ref-intro{
+  width:calc(100% - 42px);
+  height:100%!important;
+  min-height:0!important;
+  box-sizing:border-box;
+  margin:0 auto;
+  padding:100px 0 64px!important;
+  align-items:flex-start;
+  justify-content:center;
+ }
+ .about-ref .about-hero-full .about-hero-eyebrow{
+  font-size:9px;
+  letter-spacing:.095em;
+ }
+ .about-ref .about-hero-full .about-ref-intro h1{
+  font-size:clamp(49px,12.5vw,72px);
+  line-height:1.13;
+  margin:17px 0 16px;
+  max-width:100%;
+ }
+ .about-ref .about-hero-full .about-ref-intro>p{
+  max-width:360px;
+  font-size:13px;
+  line-height:1.9;
+ }
+ .about-ref .about-hero-full .about-ref-actions{margin-top:24px}
+ .about-ref .about-hero-full .about-ref-actions .action-button{
+  min-height:47px;
+  padding:12px 17px;
+  border-radius:9px!important;
+  font-size:12px;
+ }
+ .about-ref .about-hero-full .about-hero-credit{
+  bottom:21px;
+  right:20px;
+  left:20px;
+  text-align:left;
+  font-size:9px;
+ }
+}
+@media(max-width:360px){
+ .about-ref .about-hero-full .about-ref-intro{width:calc(100% - 32px)}
+ .about-ref .about-hero-full .about-ref-intro h1{font-size:46px}
+}
+@media(prefers-reduced-motion:reduce){
+ .about-ref .about-hero-full .about-panorama-clean-image{transition:none}
+}
+
+/* Full-bleed About image starts at the TOP of the viewport, behind the floating navbar,
+   matching the Home hero. Do not change the headline's vertical placement. */
+body:has(.about-ref > .about-ref-hero.about-hero-full) > .nav-shell.nav-v4{
+ position:fixed;
+ inset:0 0 auto 0;
+ width:100%;
+ z-index:101;
+}
+body:has(.about-ref > .about-ref-hero.about-hero-full) .about-ref-hero.about-hero-full{
+ margin-top:0!important;
+}

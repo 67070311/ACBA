@@ -1,0 +1,100 @@
+/* Home V12: compact editorial introduction after hero.
+   The moving industry ticker and focus service cards are deliberately unchanged. */
+.home-main .home-intro.home-intro-v12{
+ display:grid;
+ grid-template-columns:minmax(265px,.65fr) minmax(0,1.35fr);
+ gap:clamp(35px,6vw,100px);
+ align-items:stretch;
+ padding-top:clamp(76px,8vw,116px);
+ padding-bottom:clamp(75px,8vw,115px);
+}
+.home-intro-v12 .home-intro-v12-identity,
+.home-intro-v12 .home-intro-v12-story{min-width:0}
+.home-intro-v12-identity-inner{
+ display:flex;
+ flex-direction:column;
+ align-items:flex-start;
+ justify-content:center;
+ height:100%;
+ min-height:260px;
+ border-right:1px solid #dfe8f0;
+ padding-right:clamp(20px,4vw,58px);
+}
+.home-intro-v12-label,
+.home-intro-v12-overline{
+ color:#7d8c97;
+ font-size:10px;
+ font-weight:750;
+ letter-spacing:.09em;
+}
+.home-intro-v12-identity h2{
+ font-family:"Plus Jakarta Sans",sans-serif;
+ font-size:clamp(84px,8.2vw,130px);
+ font-weight:780;
+ line-height:1;
+ letter-spacing:-.095em;
+ margin:30px 0 26px;
+}
+.home-intro-v12-identity h2 span{color:#e62b3d}
+.home-intro-v12-identity small{
+ color:#9ba6ac;
+ font-size:11px;
+ line-height:1.7;
+ letter-spacing:.14em;
+ font-weight:700;
+}
+.home-intro-v12-story-inner{padding-top:10px}
+.home-intro-v12-story-inner>p{
+ font-family:"Anuphan",sans-serif;
+ font-size:clamp(25px,2.7vw,44px)!important;
+ font-weight:450;
+ line-height:1.45!important;
+ letter-spacing:-.035em!important;
+ max-width:780px;
+ color:#28323a!important;
+ margin:18px 0 34px;
+}
+.home-intro-v12-story-inner>p strong{font-weight:700}
+.home-intro-v12-note{
+ display:flex;
+ align-items:flex-end;
+ justify-content:space-between;
+ gap:35px;
+ border-top:1px solid #e3e9ee;
+ padding-top:24px;
+}
+.home-intro-v12-note>span{
+ font-size:13px;
+ line-height:1.85;
+ max-width:470px;
+ color:#657580;
+}
+.home-intro-v12-link{
+ flex:0 0 auto;
+ display:inline-flex;
+ align-items:center;
+ gap:15px;
+ color:#d62c3f;
+ font-size:13px;
+ font-weight:750;
+ padding-bottom:6px;
+ border-bottom:1px solid #d62c3f;
+ transition:gap .28s;
+}
+.home-intro-v12-link:hover{gap:21px}
+.home-intro-v12-link span{font-size:19px;line-height:1}
+@media(max-width:850px){
+ .home-main .home-intro.home-intro-v12{grid-template-columns:1fr;gap:24px;padding-block:70px}
+ .home-intro-v12-identity-inner{min-height:0;border-right:0;border-bottom:1px solid #dfe8f0;padding:0 0 28px}
+ .home-intro-v12-identity h2{font-size:clamp(75px,13vw,115px);margin:15px 0}
+ .home-intro-v12-story-inner>p{font-size:clamp(27px,4.4vw,38px)!important}
+}
+@media(max-width:560px){
+ .home-main .home-intro.home-intro-v12{padding-block:55px;gap:20px}
+ .home-intro-v12-identity h2{font-size:75px}
+ .home-intro-v12-story-inner>p{font-size:26px!important;line-height:1.5!important}
+ .home-intro-v12-note{flex-direction:column;align-items:flex-start;gap:20px}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-intro-v12-link{transition:none}
+}

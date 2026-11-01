@@ -1,0 +1,202 @@
+/* V8 adaptive typography, list layouts, reduced motion */
+@media(max-width:1200px){
+ .members-v8-hero{grid-template-columns:1fr .92fr;gap:35px}
+ .members-v8-copy h1{font-size:clamp(54px,6vw,84px)}
+ .members-v8-visual{height:470px;border-radius:60px 23px 23px 23px}
+ .library-v8-filter button{padding:9px 12px}
+}
+@media(max-width:900px){
+ .members-v8-hero{grid-template-columns:1fr;gap:30px;padding-top:70px;padding-bottom:70px}
+ .members-v8-copy{min-height:0}
+ .members-v8-copy h1{font-size:clamp(55px,8.8vw,85px);max-width:800px}
+ .members-v8-footnote{margin-top:34px}
+ .members-v8-visual{height:410px;border-radius:35px 25px 25px 25px}
+ .members-v7-topics{padding:75px 0!important}
+ .learning-topic-card{grid-template-columns:65px 1fr 15px}
+ .library-v8-header{grid-template-columns:1fr;gap:24px}
+ .library-v8-header-side{max-width:650px}
+ .library-v8-cover{padding-top:70px}
+ .library-v8-heading h1{font-size:clamp(60px,9vw,89px)}
+ .library-v8-cover-photo{height:350px}
+ .library-v8-section-heading,.library-v8-glossary-head{grid-template-columns:1fr;gap:12px}
+ .library-v8-section-heading .eyebrow-pill,.library-v8-glossary-head .eyebrow-pill{grid-column:auto}
+ .library-v8-controls{align-items:stretch}
+ .library-v8-filter{flex:1 1 100%}
+ .library-v8-search{width:100%;min-width:0}
+ .library-v8-search input{width:100%}
+ .library-v8-item{grid-template-columns:57px 1fr 100px;gap:18px}
+ .library-v8-definitions summary{grid-template-columns:125px 1fr 26px}
+ .library-v8-definitions details>div{margin-left:153px}
+ .join-information-grid>div{grid-template-columns:1fr 1.5fr}
+}
+@media(max-width:600px){
+ .members-v8-hero{padding-block:55px}
+ .members-v8-copy h1{font-size:clamp(50px,11.5vw,72px)}
+ .members-v8-copy p{font-size:14px}
+ .members-v8-hero-actions{gap:15px}
+ .members-v8-visual{height:290px;border-radius:30px 17px 17px 17px}
+ .members-v8-image-credit{left:12px;bottom:12px;font-size:9px}
+ .members-banner-photo{height:210px}
+ .members-v7-role{grid-template-columns:1fr;gap:8px!important;padding:21px 7px!important}
+ .members-v7-role>small{grid-row:auto}
+ .members-v7-role p{grid-column:1}
+ .members-journey{padding-block:65px}
+ .member-journey-item{grid-template-columns:46px 1fr;gap:5px 12px}
+ .learning-topic-card{grid-template-columns:45px 1fr!important;gap:11px;padding:23px 4px!important}
+ .learning-topic-card .learning-topic-number{font-size:18px}
+ .learning-topic-dash{display:none}
+ .learning-topic-card strong{font-size:22px}
+ .learning-topic-card p{font-size:13px}
+ .about-v7-flow-step{min-height:0!important;padding:20px 7px}
+ .join-information-grid>div{display:block!important;padding:21px 4px!important}
+ .join-information-grid h3{font-size:19px;margin-bottom:9px}
+ .join-information-grid p{margin-bottom:9px}
+ .library-v8-cover{padding-top:55px;padding-bottom:25px}
+ .library-v8-header{padding-bottom:27px}
+ .library-v8-heading h1{font-size:clamp(48px,10.5vw,72px);line-height:1.13}
+ .library-v8-header-side p{font-size:13px}
+ .library-v8-cover-photo{height:270px;border-radius:17px}
+ .library-v8-photo-label{left:11px;bottom:10px;min-width:0;max-width:82%;padding:12px 14px;gap:4px}
+ .library-v8-photo-label span{font-size:8px}
+ .library-v8-photo-label strong{font-size:15px}
+ .library-v8-counter{right:10px;top:10px;bottom:auto;font-size:8px;padding:9px 11px}
+ .library-v8-cover-bottom{font-size:8px}
+ .library-v8-collection{padding:70px 0}
+ .library-v8-section-heading h2{font-size:40px}
+ .library-v8-filter{gap:5px}
+ .library-v8-filter button{padding:9px 12px;font-size:10px}
+ .library-v8-item{grid-template-columns:39px 1fr;gap:10px;align-items:start;padding:23px 3px}
+ .library-v8-item-index{font-size:21px}
+ .library-v8-item-main h3{font-size:20px}
+ .library-v8-item-main p{font-size:12px}
+ .library-v8-item-link{grid-column:2;justify-content:flex-start;font-size:10px;margin-top:2px}
+ .library-v8-glossary{padding:70px 0}
+ .library-v8-glossary-head h2{font-size:40px}
+ .library-v8-definitions summary{grid-template-columns:1fr 24px;gap:8px;padding:19px 3px}
+ .library-v8-definitions summary span{grid-column:1}
+ .library-v8-definitions summary strong{grid-column:1;grid-row:2;font-size:19px}
+ .library-v8-definitions summary b{grid-column:2;grid-row:1/span 2}
+ .library-v8-definitions details>div{margin:0 6px 23px}
+ .library-v8-definitions p{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){
+ .members-v8-visual .editorial-photo,.library-v8-cover-photo>img,.library-v8-item,.learning-topic-card,.members-v7-role,.about-v7-flow-step{transition:none}
+}
+
+
+/* Content-only responsive refinements; no hero/banner selectors. */
+@media(max-width:1050px){
+ .news-journal-controls{gap:16px}
+ .news-journal-tabs button{min-height:44px}
+ .library-v8-filter button{min-height:44px}
+ .members-directory-intro .directory-status{max-width:100%}
+ .news-v6-article-body article{min-width:0}
+ .learning-v7-guide-heading,.library-v8-glossary-head{gap:20px}
+}
+@media(max-width:720px){
+ .news-journal-controls{align-items:stretch}
+ .news-journal-tabs{
+  flex-wrap:nowrap;
+  width:100%;
+  overflow-x:auto;
+  overscroll-behavior-inline:contain;
+  scrollbar-width:thin;
+  padding-bottom:7px;
+ }
+ .news-journal-tabs button{
+  flex:0 0 auto;white-space:nowrap;
+  min-height:44px;
+ }
+ .news-journal-search{width:100%;min-height:47px}
+ .news-journal-search input{min-width:0;flex:1}
+ .library-v8-controls{align-items:stretch}
+ .library-v8-filter{
+  display:flex;flex-wrap:nowrap;overflow-x:auto;
+  overscroll-behavior-inline:contain;
+  scrollbar-width:thin;padding-bottom:6px;
+ }
+ .library-v8-filter button{white-space:nowrap;flex:0 0 auto;min-height:44px}
+ .library-v8-search{min-height:47px}
+ .library-v8-search input{width:100%;min-width:0}
+ .about-ref-timeline-row{
+  grid-template-columns:1fr auto;gap:10px;
+ }
+ .about-ref-timeline-row time,
+ .about-ref-timeline-row strong{
+  grid-column:1;grid-row:auto;
+ }
+ .about-ref-timeline-row .timeline-link-text{
+  grid-column:2;grid-row:1;
+ }
+ .about-ref-timeline .reveal-block{min-width:0}
+ .about-v7-flow-step p,
+ .member-industry-table p,
+ .news-journal-copy p,
+ .learning-v7-check p,
+ .library-v8-item-main p{line-height:1.8}
+}
+@media(max-width:560px){
+ .home-intro .intro-description p,
+ .about-ref-narrative .about-ref-story p,
+ .about-sector-lead p,
+ .members-v7-knowledge-copy p,
+ .news-v6-article-body article p,
+ .learning-section-heading p{font-size:14px;line-height:1.9}
+ .about-ref-timeline-list{padding-left:12px}
+ .about-ref-timeline-row{padding:18px 5px;gap:6px}
+ .about-ref-timeline-row strong{font-size:15px}
+ .news-journal-count{font-size:11px}
+ .library-v8-item-main p{font-size:13px}
+ .members-directory-intro .directory-status{padding-top:16px}
+ .members-directory-intro .directory-status p{font-size:14px}
+ .news-journal-photo{min-height:185px}
+ .news-journal-copy h3{font-size:23px}
+ .news-journal-search input,.library-v8-search input{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ .about-ref-timeline-list::after{animation:none!important;transform:scaleY(1)!important}
+ .about-ref-timeline .reveal-block,.about-v7-flow-steps .reveal-block,
+ .members-v7-role-grid .reveal-block{opacity:1!important;transform:none!important}
+ .news-journal-photo .editorial-photo{transition:none!important;transform:none!important}
+ .library-v8-definitions details[open]>div,
+ .about-ref-faq-list details[open]>p,
+ .member-questions-list details[open]>p,
+ .contact-support-list details[open]>p{animation:none!important}
+}
+
+
+/* Training report & guide: tablet and phone adaptations (no banner changes). */
+@media(max-width:900px){
+ .training-report-head{grid-template-columns:1fr;gap:18px;margin-bottom:38px}
+ .training-report-head>p{max-width:670px}
+ .training-report-summary{grid-template-columns:1fr;gap:18px}
+ .training-report-total{padding-top:29px}
+ .training-report-total-value strong{font-size:clamp(105px,15vw,150px)}
+ .training-report-total p{margin:0}
+ .training-report-courses{padding-left:0;border-left:0;border-top:1px solid #dadeda}
+ .training-report-course{grid-template-columns:95px 1fr;padding:24px 0}
+ .training-refresh .training-before{grid-template-columns:1fr;gap:35px}
+ .training-before-intro{position:static}
+ .training-before-intro>p{max-width:650px}
+}
+@media(max-width:560px){
+ .training-refresh .training-report{padding:66px 0}
+ .training-report-head h2{font-size:clamp(40px,9vw,56px)}
+ .training-report-head>p{font-size:14px}
+ .training-report-total-value{margin:17px 0 6px}
+ .training-report-total-value strong{font-size:clamp(94px,26vw,140px)}
+ .training-report-total-value small{font-size:17px}
+ .training-report-course{grid-template-columns:62px minmax(0,1fr);gap:16px;padding:22px 0}
+ .training-report-course-count{font-size:44px}
+ .training-report-course h3{font-size:19px}
+ .training-report-source{font-size:10px}
+ .training-refresh .training-before{padding-top:70px;padding-bottom:96px;gap:28px}
+ .training-before-intro h2{font-size:clamp(40px,9.4vw,53px)}
+ .training-before-intro>p{font-size:14px;margin-top:18px}
+ .training-before-step{grid-template-columns:34px minmax(0,1fr);gap:13px;padding:23px 2px}
+ .training-before-step h3{font-size:20px}
+ .training-before-step p{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){
+ .training-before-step{transition:none}
+}

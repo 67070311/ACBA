@@ -1,0 +1,106 @@
+/* V7 mobile / tablet refinements and motion accessibility */
+@media(max-width:1180px){
+ .members-v7-hero-copy{max-width:620px}
+ .members-v7-floating{display:none}
+ .members-v7-role-grid,.about-v7-flow-steps,.learning-v7-checks{grid-template-columns:repeat(2,1fr)}
+ .members-v7-knowledge{gap:35px}
+ .about-sector-layout{gap:45px}
+ .library-v7-hero-inner{min-height:560px}
+ .library-v7-hero-visual{height:475px}
+ .about-v7-switch-grid{grid-template-columns:.9fr 1.1fr}
+}
+@media(max-width:800px){
+ .about-v7-focus{margin:0 10px;border-radius:25px;padding:75px 0}
+ .about-v7-focus-heading,.about-v7-switch-grid,.members-v7-topics-head,.members-v7-knowledge,.learning-v7-facts-grid,.library-v7-hero-inner{grid-template-columns:1fr}
+ .about-v7-focus-heading>span,.members-v7-topics-head .eyebrow-pill{grid-column:auto}
+ .about-v7-focus-heading{gap:12px}
+ .about-v7-focus-heading h2{font-size:clamp(43px,7vw,63px)}
+ .about-v7-switch-grid{gap:12px}
+ .about-v7-switch-menu{display:grid;grid-template-columns:repeat(3,1fr)}
+ .about-v7-switch-menu button{min-height:150px;padding:16px;flex-direction:column;align-items:flex-start;gap:9px}
+ .about-v7-switch-icon{width:43px;height:43px;flex:0 0 43px}
+ .about-v7-switch-number{display:none}
+ .about-v7-switch-copy strong{font-size:14px}
+ .about-v7-switch-panel{min-height:470px}
+ .about-v7-switch-photo{height:280px}
+ .about-v7-flow-intro,.learning-v7-guide-heading{flex-direction:column;align-items:flex-start;gap:10px}
+ .about-v7-flow{padding:80px 0}
+ .about-v7-flow-intro h2{font-size:clamp(38px,6vw,54px)}
+ .about-sector-report{margin:0 10px;border-radius:26px;padding:65px 0!important}
+ .about-sector-layout{grid-template-columns:1fr}
+ .about-sector-stat.primary{min-height:165px}
+ .about-sector-stat strong{font-size:64px}
+ .about-sector-stat:not(.primary) strong{font-size:49px}
+ .about-ref-narrative{padding:75px 0!important}
+ .members-v7-hero{min-height:610px;margin:10px;border-radius:27px}
+ .members-v7-hero-grid{min-height:610px}
+ .members-v7-hero-photo .editorial-photo{object-position:62% center}
+ .members-v7-hero-shade{background:linear-gradient(90deg,rgba(246,253,255,.94),rgba(246,253,255,.8) 65%,rgba(246,253,255,.28))}
+ .members-v7-hero-copy h1{font-size:clamp(61px,9.5vw,87px)}
+ .members-v7-topics{margin:0 10px;padding:75px 0;border-radius:27px}
+ .members-v7-knowledge{padding-block:80px}
+ .members-v7-knowledge-photo{height:345px}
+ .members-v7-knowledge-copy h2{font-size:48px}
+ .learning-v7-facts{margin:0 10px;padding:70px 0;border-radius:27px}
+ .learning-v7-facts-grid{gap:26px}
+ .learning-v7-guide{padding-block:80px}
+ .library-v7-hero{margin:10px;border-radius:27px}
+ .library-v7-hero-inner{gap:0;min-height:0;padding:55px 0 48px}
+ .library-v7-hero-text{padding:0}
+ .library-v7-hero-text h1{font-size:clamp(60px,9vw,86px)}
+ .library-v7-hero-visual{height:375px;max-width:570px;width:100%;margin:40px auto 0}
+ .library-v7-main-image{height:91%}
+ .library-v7-secondary-image{height:40%}
+}
+@media(max-width:560px){
+ .about-v7-focus-heading h2{font-size:42px}
+ .about-v7-switch-menu{grid-template-columns:1fr;gap:8px}
+ .about-v7-switch-menu button{min-height:0;flex-direction:row;align-items:center;padding:12px}
+ .about-v7-switch-copy{gap:3px}
+ .about-v7-switch-copy strong{font-size:14px}
+ .about-v7-switch-copy small{font-size:8px}
+ .about-v7-switch-icon{width:41px;height:41px;flex:0 0 41px;border-radius:13px}
+ .about-v7-switch-panel{min-height:450px}
+ .about-v7-switch-photo{height:240px}
+ .about-v7-switch-text{padding:24px}
+ .about-v7-switch-text h3{font-size:25px}
+ .about-v7-flow-steps,.members-v7-role-grid,.learning-v7-checks{grid-template-columns:1fr}
+ .about-v7-flow-step{min-height:190px;padding:23px}
+ .about-v7-flow-step h3{margin-top:16px}
+ .about-sector-stat.primary{min-height:170px}
+ .about-sector-stat:not(.primary){min-height:170px}
+ .about-sector-stat strong{font-size:64px}
+ .about-sector-stat:not(.primary) strong{font-size:47px}
+ .members-v7-hero{min-height:575px}
+ .members-v7-hero-grid{min-height:575px}
+ .members-v7-hero-copy{padding:60px 0}
+ .members-v7-hero-copy h1{font-size:clamp(50px,11vw,70px)}
+ .members-v7-hero-copy p{font-size:14px}
+ .members-v7-hero-shade{background:linear-gradient(90deg,rgba(246,253,255,.96),rgba(246,253,255,.78) 90%)}
+ .members-v7-actions{gap:18px}
+ .members-v7-role{min-height:230px;padding:24px}
+ .members-v7-knowledge-photo{height:255px}
+ .members-v7-knowledge-copy h2{font-size:40px}
+ .members-v7-knowledge-stats{gap:16px}
+ .members-v7-knowledge-stats strong{font-size:52px}
+ .learning-v7-stats>div{padding:20px}
+ .learning-v7-stats strong{font-size:54px}
+ .learning-v7-guide-heading h2{font-size:41px}
+ .learning-v7-check{padding:22px;min-height:155px}
+ .learning-v7-check h3{margin:14px 0 8px}
+ .library-v7-hero-inner{padding:50px 0 30px}
+ .library-v7-hero-text h1{font-size:clamp(48px,10vw,67px)}
+ .library-v7-hero-text p{font-size:14px}
+ .library-v7-hero-visual{height:310px}
+ .library-v7-main-image{width:89%;border-radius:42% 19px 19px 19px}
+ .library-v7-secondary-image{height:37%;width:45%;border-width:5px;border-radius:19px}
+ .library-v7-floating-label{min-width:110px;padding:11px 14px}
+ .library-v7-floating-label strong{font-size:39px}
+ .news-v7-cover-button{min-width:210px;height:61px;border-radius:13px}
+ .news-v7-cover-icon{height:61px;width:60px}
+ .news-v7-cover-label{font-size:12px;padding:0 14px}
+}
+@media(prefers-reduced-motion:reduce){
+ .about-v7-switch-panel,.about-v7-switch-photo img{animation:none}
+ .about-v7-switch-menu button,.members-v7-role,.about-v7-flow-step,.learning-v7-check,.library-v7-main-image img,.news-v7-cover-button{transition:none}
+}
