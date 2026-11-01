@@ -1,0 +1,10 @@
+# ACBA monorepo: keep generated files, dependencies and secrets out of Git.
+**/node_modules/
+**/.next/
+**/.vercel/
+**/out/
+**/build/
+**/.env
+**/.env.*
+**/*.tsbuildinfo
+.DS_Store
