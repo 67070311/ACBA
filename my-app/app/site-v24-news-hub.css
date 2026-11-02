@@ -100,3 +100,34 @@
 .news-v13 .news-v13-masthead.site-wrap{width:100%;max-width:none;margin:0;padding-left:max(28px,calc((100vw - 1360px)/2));padding-right:max(28px,calc((100vw - 1360px)/2));}
 .news-v13 .news-v13-masthead::before{inset:0;border-radius:0;}
 @media(max-width:720px){.news-v13 .news-v13-masthead.site-wrap{padding-left:22px;padding-right:22px}.news-v13 .news-v13-masthead::before{inset:0;border-radius:0;}}
+
+/* Mobile readability pass: Material body-large scale and comfortable Thai leading. */
+@media(max-width:760px){
+ html{font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+ body{font-size:16px;line-height:1.75}
+ :is(.home-main,.inner-page,.footer) :where(p,li,dd,blockquote){font-size:16px;line-height:1.8}
+ :is(.home-main,.inner-page,.footer) :where(h2){line-height:1.28}
+ :is(.home-main,.inner-page,.footer) :where(h3){line-height:1.4}
+ .home-main :is(.home-hero-panel>p,.service-card-caption p,.article-card>p,.section-title>p),
+ .news-v13 :is(.news-v13-masthead-side p,.news-hub-heading p,.news-v13-card p,.news-v13-lead-content p),
+ .members-v4 :is(.members-v8-copy>p,.acba-directory-explain,.directory-status p),
+ .acba-join-v2 :is(.acba-join-hero-copy>p,.acba-join-section-head p,.acba-join-doc-copy p,.acba-join-value-grid p,.acba-join-step-grid p,.acba-join-form-side>p),
+ .course-browser-v2 .course-item p,
+ .footer :is(p,small){font-size:16px!important;line-height:1.75!important}
+ :is(.home-main,.inner-page,.footer) :where(a,button,summary,label,input,textarea,select){line-height:1.55}
+ .nav-v4 .mobile-drawer :is(.mobile-nav-row a,.mobile-nav-child,.mobile-join-link,.mobile-join){font-size:15px!important;line-height:1.5}
+ .nav-v4 :is(.language-switch a,.header-join-cta){font-size:13px!important}
+ .home-main .home-quick-actions .home-quick-link,
+ .news-v13 .news-hub-filters button,
+ .news-v13 .news-v13-lead-footer,
+ .acba-join-v2 :is(.acba-join-primary,.acba-join-text-link,.acba-join-anchor a,.acba-join-download),
+ .course-browser-v2 :is(.course-item h3,.course-prices strong){font-size:14px!important}
+ .acba-join-v2 .acba-join-field-grid :is(label,input,select,textarea),
+ .news-v13 .news-v13-search input{font-size:16px!important;line-height:1.5}
+ :is(.home-main,.inner-page,.footer) :where(small,time,figcaption,.eyebrow,.acba-join-kicker,.news-v13-eyebrow,.news-v13-section-index){font-size:12px;line-height:1.5}
+}
+@media(max-width:430px){
+ .nav-v4 .mobile-drawer :is(.mobile-nav-row a,.mobile-nav-child){font-size:15px!important}
+ .news-v13 .news-hub-filters button{font-size:14px!important}
+ .course-browser-v2 .course-item p{font-size:15px!important}
+}
