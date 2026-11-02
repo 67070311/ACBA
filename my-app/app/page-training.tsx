@@ -8,7 +8,7 @@ import {ProfessionalPaths} from "./professional-paths";
 type Lang="th"|"en";
 const foundations=[
  {icon:"plane" as const,th:"ภาพรวมระบบ Air Cargo",en:"Air Cargo Ecosystem",bodyTh:"สายการบิน ผู้ให้บริการภาคพื้น คลังสินค้า และผู้ประกอบการที่เกี่ยวข้องทำงานร่วมกันอย่างไร",bodyEn:"Explore airlines, ground handlers, warehouses and other stakeholders."},
- {icon:"package" as const,th:"การปฏิบัติงานขนส่งสินค้า",en:"Cargo Operations",bodyTh:"การรับสินค้า การจัดเก็บ การคำนวณค่าระวาง และการจัดการสินค้าทางอากาศ",bodyEn:"Cargo acceptance, storage, tariff calculations and handling fundamentals."},
+ {icon:"package" as const,th:"การปฏิบัติงานขนส่งสินค้าทางอากาศ",en:"Cargo Operations",bodyTh:"การรับสินค้า การจัดเก็บ การคำนวณค่าระวาง และการจัดการสินค้าทางอากาศ",bodyEn:"Cargo acceptance, storage, tariff calculations and handling fundamentals."},
  {icon:"shield" as const,th:"ความปลอดภัยด้าน Air Cargo",en:"Cargo Security",bodyTh:"แนวทาง Known Consignor (KC), Regulated Agent (RA) และหลักการรักษาความปลอดภัย",bodyEn:"Known Consignor, Regulated Agent and air cargo security principles."},
 ];
 export function TrainingPage({lang="th"}:{lang?:Lang}){
@@ -40,7 +40,7 @@ export function TrainingPage({lang="th"}:{lang?:Lang}){
   </div></section>
   <ProfessionalPaths lang={lang}/>
   <section className="learning-explore site-wrap">
-   <div className="learning-section-heading"><Eyebrow>{en?"EXPLORE THE TOPICS":"สำรวจองค์ความรู้"}</Eyebrow><h2>{en?"Explore essential":"สำรวจองค์ความรู้"}<br/><em>{en?"air cargo knowledge.":"ด้าน Air Cargo"}</em></h2><p>{en?"A practical overview of the topics that matter across the air freight value chain.":"ทำความเข้าใจเรื่องสำคัญตั้งแต่ระบบขนส่งสินค้า การปฏิบัติการ ไปจนถึงมาตรฐานความปลอดภัย"}</p></div>
+   <div className="learning-section-heading"><Eyebrow>{en?"EXPLORE THE TOPICS":"สำรวจองค์ความรู้"}</Eyebrow><h2>{en?"Explore essential":"สำรวจองค์ความรู้"}<br/><em>{en?"air cargo knowledge.":"ด้าน Air Cargo"}</em></h2><p>{en?"A practical overview of the topics that matter across the air freight value chain.":"ทำความเข้าใจเรื่องสำคัญตั้งแต่ระบบขนส่งสินค้าทางอากาศ การปฏิบัติการ ไปจนถึงมาตรฐานความปลอดภัย"}</p></div>
    <div className="learning-topic-row">{foundations.map((item,i)=><Reveal key={item.icon} delay={i*75}><article className="learning-topic-card"><span className="learning-topic-number">0{i+1}</span><div><Link className="learning-topic-internal" href={(en?"/en":"")+"/training/knowledge/"+["ecosystem","operations","security"][i]}><strong>{en?item.en:item.th}</strong><p>{en?item.bodyEn:item.bodyTh}</p><small>{en?"Read the guide":"อ่านรายละเอียด"} <Icon name="arrow-right" size={16}/></small></Link></div><span className="learning-topic-dash" aria-hidden="true"/></article></Reveal>)}</div>
   </section>
   <section className="training-report" aria-labelledby="training-report-heading">

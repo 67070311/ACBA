@@ -11,7 +11,7 @@ export function HeroSection() {
     <div className="container hero-content">
       <div className="hero-overline"><span className="hero-overline-dot"/> AIRLINE CARGO BUSINESS ASSOCIATION <span className="hero-overline-index">/ THAILAND</span></div>
       <h1>Moving cargo.<br/><em>Connecting</em><br/>possibilities<span className="hero-period">.</span></h1>
-      <p className="hero-thai">ขับเคลื่อนความร่วมมือ<br/>เพื่ออนาคตธุรกิจการบินขนส่งสินค้าไทย</p>
+      <p className="hero-thai">ขับเคลื่อนความร่วมมือ<br/>เพื่ออนาคตธุรกิจขนส่งสินค้าทางอากาศของไทย</p>
       <div className="hero-buttons">
         <Link className="button button-red" href="/#about">รู้จัก ACBA <span><Icon name="arrow-up-right" size={16}/></span></Link>
         <Link className="button button-glass" href="/#news">ข่าวสารและกิจกรรม <span><Icon name="arrow-up-right" size={16}/></span></Link>
