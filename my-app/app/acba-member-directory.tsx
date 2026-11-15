@@ -75,7 +75,7 @@ export function AcbaMemberDirectory({lang="th"}:{lang?:Language}){
      <span>{en?"MEMBER INFORMATION":"ข้อมูลสมาชิกสายการบิน"}</span>
      <button type="button" className="acba-member-dialog-close" aria-label={en?"Close member information":"ปิดข้อมูลสมาชิก"} onClick={()=>dialogRef.current?.close()}>×</button>
     </div>
-    <div className="acba-member-dialog-logo">
+    <div className="acba-member-dialog-logo" data-airline={selectedMember.code}>
      {LOGOS[selectedMember.code]?<Image src={LOGOS[selectedMember.code].file} alt={selectedMember.airline+" logo"} width={280} height={130} unoptimized />:<span>{en?"No verified logo available":"ยังไม่มีโลโก้ที่ตรวจสอบได้"}</span>}
     </div>
     <h3>{selectedMember.airline}</h3>

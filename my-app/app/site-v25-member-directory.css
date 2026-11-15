@@ -18,6 +18,21 @@
 .acba-member-entry[data-airline="CV"] .acba-member-logo{transform:scale(1.03)}
 .acba-member-entry[data-airline="EK"] .acba-member-logo{max-height:112px}
 .acba-member-entry[data-airline="KJ"] .acba-member-logo{max-height:108px}
+/* Pattaya Airways supplies a white, transparent reverse-logo.
+   Place it on a contrasting navy field instead of recoloring the official asset. */
+.acba-member-entry[data-airline="VV"] .acba-member-brand{
+ box-sizing:border-box;width:min(86%,228px);height:116px;min-height:0;
+ margin:8px auto 18px;padding:10px 15px;border-radius:10px;
+ background:#193c51
+}
+.acba-member-entry[data-airline="VV"] .acba-member-logo{max-width:100%;max-height:94px}
+.acba-member-dialog-logo[data-airline="VV"]{
+ box-sizing:border-box;width:min(100%,250px);height:140px;
+ margin:12px auto 18px;padding:12px 18px;border-radius:12px;
+ background:#193c51
+}
+.acba-member-dialog-logo[data-airline="VV"] img{max-width:100%;max-height:108px}
+
 .acba-member-logo-unverified{max-width:210px;line-height:1.75;font-size:12px;color:#8998a3;border-bottom:1px solid #cbd5da;padding-bottom:7px}
 .acba-member-identity{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:7px 10px;max-width:100%}
 .acba-member-identity h3{font-family:"Anuphan",sans-serif;font-weight:720;color:#264353;font-size:clamp(15px,1.25vw,17px);line-height:1.45;letter-spacing:-.026em;margin:0;overflow-wrap:anywhere}
@@ -47,6 +62,14 @@
  .acba-member-entry[data-airline="UU"] .acba-member-logo,
  .acba-member-entry[data-airline="VV"] .acba-member-logo{max-height:39px;max-width:82px}
  .acba-member-entry[data-airline="KJ"] .acba-member-logo{max-height:54px}
+ .acba-member-entry[data-airline="VV"] .acba-member-brand{
+  width:min(100%,105px);height:74px;min-height:0;
+  margin:0 auto;padding:7px 9px;border-radius:7px
+ }
+ .acba-member-entry[data-airline="VV"] .acba-member-logo{
+  max-width:100%;max-height:60px
+ }
+
  .acba-member-identity{display:none}
  .acba-member-identity h3{color:#526776;font-size:clamp(10.5px,2.85vw,12px);font-weight:600;line-height:1.32;letter-spacing:-.025em;overflow-wrap:normal;hyphens:auto;margin:0}
  .acba-member-code,.acba-member-gsa{display:none}
