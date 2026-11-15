@@ -1,9 +1,10 @@
 {
   "AA": {
-    "file": "/member-logos/aa-american-airlines-wordmark-2013.svg",
-    "fileName": "American Airlines wordmark (2013).svg",
-    "source": "https://commons.wikimedia.org/wiki/File:American_Airlines_wordmark_%282013%29.svg",
-    "sha256": "e78164cfbab0244d26d36aa08f0075d9acd40824d2d094107fc21b95deb0ba8a"
+    "file": "/member-logos/aa-american-airlines-cargo-official.png",
+    "fileName": "aa-american-airlines-cargo-official.png",
+    "source": "https://s202.q4cdn.com/986123435/files/doc_downloads/logos/american-airlines-cargo/AA-Cargo-Logo-with-Clear-Space.png",
+    "verifiedAgainst": "https://news.aa.com/multimedia/logos/default.aspx",
+    "sha256": "9ae0dfb5ce276b0d8f7e0212a4fbb54fb5f06ca2f696968bf1a817e8eb732bf0"
   },
   "AC": {
     "file": "/member-logos/ac-air-canada-2017.svg",
@@ -42,16 +43,10 @@
     "sha256": "9278a88fc6b6651a4a57c55f19e17753bb64bb281305fbad3ca7536177bc93db"
   },
   "EK": {
-    "file": "/member-logos/ek-emirates-banner-logo.svg",
-    "fileName": "Emirates banner logo.svg",
-    "source": "https://commons.wikimedia.org/wiki/File:Emirates_banner_logo.svg",
-    "sha256": "d067d6cf2b9d071b4ee66edcb29a526beeca9c5cc07ba02a5d20c534489ec728"
-  },
-  "EY": {
-    "file": "/member-logos/ey-etihad-airways-logo.svg",
-    "fileName": "Etihad-airways-logo.svg",
-    "source": "https://commons.wikimedia.org/wiki/File:Etihad-airways-logo.svg",
-    "sha256": "cd7037313ebe53e14178ebd2607c4bbd259c762ecb6a9cc2710b7d5b5e3c518a"
+    "file": "/member-logos/ek-emirates-skycargo-logo.png",
+    "fileName": "Emirates SkyCargo Logo.svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Emirates_SkyCargo_Logo.svg",
+    "sha256": "717cb6f9bebe4edd454eae5f50768774829bb0b94ee3b84451899c48b40a01fd"
   },
   "FD": {
     "file": "/member-logos/fd-airasia-new-logo.svg",
@@ -78,10 +73,10 @@
     "sha256": "d91a15acb37a960c1ecb29a017773f749d24080785a10a6ba58d1417338087c2"
   },
   "KE": {
-    "file": "/member-logos/ke-korean-air-2025.svg",
-    "fileName": "Korean Air 2025.svg",
-    "source": "https://commons.wikimedia.org/wiki/File:Korean_Air_2025.svg",
-    "sha256": "1f6d4689232d0d4c216ddbc4d45a76c672cee8b239fb284eb42e07b1424c618d"
+    "file": "/member-logos/ke-korean-air-cargo-2025.png",
+    "fileName": "Korean Air Cargo 2025.svg",
+    "source": "https://commons.wikimedia.org/wiki/File:Korean_Air_Cargo_2025.svg",
+    "sha256": "afa99895460acfed5aab26a5e14dedacc8768a95ff91911c986df516b1ddbe5c"
   },
   "KJ": {
     "file": "/member-logos/kj-airzeta-logo-2025.svg",
@@ -125,12 +120,6 @@
     "source": "https://commons.wikimedia.org/wiki/File:Thai_Airways_logo.svg",
     "sha256": "bd146f4259bad701032188a568c02d1fc9b3dd5d34c19ae2eb3f1d3ca0c74d5c"
   },
-  "XJ": {
-    "file": "/member-logos/xj-airasia-x-logo.svg",
-    "fileName": "AirAsia X Logo.svg",
-    "source": "https://commons.wikimedia.org/wiki/File:AirAsia_X_Logo.svg",
-    "sha256": "f52df5752972caaef1090a8963a8a17a231409d620c418122df6d2183f3d854b"
-  },
   "BA": {
     "file": "/member-logos/ba-logo-wordmark-british-airways.png",
     "fileName": "Logo wordmark British Airways.png",
@@ -138,10 +127,11 @@
     "sha256": "8acdf2a132be575690cf3bb1ee5b2522a729eaf1a60c9d8a23053baa446ba5ec"
   },
   "KL": {
-    "file": "/member-logos/kl-klm-logo.png",
-    "fileName": "KLM logo.svg",
-    "source": "https://commons.wikimedia.org/wiki/File:KLM_logo.svg",
-    "sha256": "dfb170787cbe6ac49742a81142e872589041e5f7806eb345cd303f47220c20d4"
+    "file": "/member-logos/kl-klm-cargo-official-account.jpg",
+    "fileName": "kl-klm-cargo-official-account.jpg",
+    "source": "https://pbs.twimg.com/profile_images/923844682/KLM_Cargo_logo-new.jpg",
+    "verifiedAgainst": "https://x.com/KLMCargo",
+    "sha256": "a633b72bc28f93bb6e04d89e40936fc7feba3f6f1666eb4f03ac7c05e114e0ca"
   },
   "KU": {
     "file": "/member-logos/ku-kuwait-airways-wordmark.png",
