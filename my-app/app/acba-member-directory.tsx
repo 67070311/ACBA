@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
 import type {CSSProperties} from "react";
 import {AIRLINE_MEMBERS} from "./acba-members-data";
+import type {AirlineMember} from "./acba-members-data";
 import logoSources from "../public/member-logos/sources.json";
 
 type Language = "th" | "en";
@@ -12,6 +13,9 @@ const LOGOS: Record<string,{file:string;fileName:string;source:string;sha256:str
 export function AcbaMemberDirectory({lang="th"}:{lang?:Language}){
  const en=lang==="en";
  const sectionRef=useRef<HTMLElement>(null);
+ const dialogRef=useRef<HTMLDialogElement>(null);
+ const [selectedMember,setSelectedMember]=useState<AirlineMember|null>(null);
+ const openDetails=(member:AirlineMember)=>{setSelectedMember(member);dialogRef.current?.showModal();};
 
  useEffect(()=>{
   const section=sectionRef.current;
@@ -59,11 +63,29 @@ export function AcbaMemberDirectory({lang="th"}:{lang?:Language}){
        <h3>{member.airline}</h3>
        <span className="acba-member-code">{member.code}</span>
       </div>
-      {member.gsa?<><p className="acba-member-gsa"><span>GSA</span>{member.gsa}</p><details className="acba-member-gsa-details"><summary>GSA</summary><p>{member.gsa}</p></details></>:null}
+      {member.gsa?<p className="acba-member-gsa"><span>GSA</span>{member.gsa}</p>:null}
+      <button type="button" className="acba-member-mobile-hit" aria-label={en?`View details for ${member.airline}`:`ดูข้อมูลสมาชิก ${member.airline}`} onClick={()=>openDetails(member)} />
      </article>;
     })}
    </div>
   </div>
+  <dialog ref={dialogRef} className="acba-member-dialog" aria-label={en?"Airline member details":"รายละเอียดสมาชิกสายการบิน"} onClose={()=>setSelectedMember(null)} onClick={event=>{if(event.target===event.currentTarget)event.currentTarget.close();}}>
+   {selectedMember&&<div className="acba-member-dialog-content">
+    <div className="acba-member-dialog-top">
+     <span>{en?"MEMBER INFORMATION":"ข้อมูลสมาชิกสายการบิน"}</span>
+     <button type="button" className="acba-member-dialog-close" aria-label={en?"Close member information":"ปิดข้อมูลสมาชิก"} onClick={()=>dialogRef.current?.close()}>×</button>
+    </div>
+    <div className="acba-member-dialog-logo">
+     {LOGOS[selectedMember.code]?<Image src={LOGOS[selectedMember.code].file} alt={selectedMember.airline+" logo"} width={280} height={130} unoptimized />:<span>{en?"No verified logo available":"ยังไม่มีโลโก้ที่ตรวจสอบได้"}</span>}
+    </div>
+    <h3>{selectedMember.airline}</h3>
+    <p className="acba-member-dialog-code">{en?"Airline code":"รหัสสายการบิน"} <strong>{selectedMember.code}</strong></p>
+    <div className="acba-member-dialog-gsa">
+     <span>{en?"GENERAL SALES AGENT (GSA)":"บริษัทตัวแทน GSA"}</span>
+     <p>{selectedMember.gsa??(en?"Not specified in the member list":"ไม่ระบุในเอกสารสมาชิก")}</p>
+    </div>
+   </div>}
+  </dialog>
   <div className="site-wrap acba-member-source">
    <p>{en?"Source: ACBA Member List, 30 March 2026. China Airlines appears twice in the document and is displayed once here.":"อ้างอิง ACBA Member List ณ วันที่ 30 มีนาคม 2569 โดยแสดง China Airlines เพียงครั้งเดียว เนื่องจากมีชื่อซ้ำในเอกสาร"}</p>
    <p>{en?"Where a logo cannot be verified, no substitute is used. Missing GSA details are left blank.":"รายการที่ยังตรวจสอบโลโก้ไม่ได้จะแสดงเฉพาะชื่อ ไม่มีการใช้โลโก้อื่นแทน และไม่เติมข้อมูล GSA ที่เอกสารไม่ได้ระบุ"}</p>
