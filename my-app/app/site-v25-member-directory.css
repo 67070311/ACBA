@@ -34,12 +34,12 @@
  .acba-member-intro-labels{flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:18px}
  .acba-member-intro-main{display:block}
  .acba-member-intro-main h2{font-size:clamp(40px,9vw,61px);letter-spacing:-.06em}
- .acba-member-intro-main p{border-left:0;padding-left:0;margin-top:22px;max-width:510px;font-size:13px}
+ .acba-member-intro-main p{display:none}
  .acba-member-gallery{background:#fff;padding:4px 0 25px}
  .acba-member-grid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:10px}
- .acba-member-entry{position:relative;min-width:0;min-height:128px;padding:13px 3px 15px;border-bottom-color:#e7edf1}
- .acba-member-brand{height:62px;min-height:62px;align-items:center;justify-content:center;overflow:hidden;margin:0 0 5px;padding:0}
- .acba-member-logo{width:auto;height:auto;max-height:54px;max-width:100%;object-fit:contain}
+ .acba-member-entry{position:relative;min-width:0;min-height:106px;padding:12px 3px;border-bottom-color:#e7edf1}
+ .acba-member-brand{height:82px;min-height:82px;align-items:center;justify-content:center;overflow:hidden;margin:0;padding:0}
+ .acba-member-logo{width:auto;height:auto;max-height:68px;max-width:100%;object-fit:contain}
  .acba-member-entry[data-airline="CX"] .acba-member-logo,
  .acba-member-entry[data-airline="CV"] .acba-member-logo{transform:none}
  .acba-member-entry[data-airline="EK"] .acba-member-logo,
@@ -47,7 +47,7 @@
  .acba-member-entry[data-airline="UU"] .acba-member-logo,
  .acba-member-entry[data-airline="VV"] .acba-member-logo{max-height:39px;max-width:82px}
  .acba-member-entry[data-airline="KJ"] .acba-member-logo{max-height:54px}
- .acba-member-identity{display:block;width:100%;min-height:28px}
+ .acba-member-identity{display:none}
  .acba-member-identity h3{color:#526776;font-size:clamp(10.5px,2.85vw,12px);font-weight:600;line-height:1.32;letter-spacing:-.025em;overflow-wrap:normal;hyphens:auto;margin:0}
  .acba-member-code,.acba-member-gsa{display:none}
  .acba-member-logo-unverified{max-width:100%;font-size:9px;line-height:1.4;border:0;padding:0}
