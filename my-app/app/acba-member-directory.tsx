@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import {useEffect, useRef} from "react";
+import type {CSSProperties} from "react";
 import {AIRLINE_MEMBERS} from "./acba-members-data";
 import logoSources from "../public/member-logos/sources.json";
 
@@ -7,22 +11,46 @@ const LOGOS: Record<string,{file:string;fileName:string;source:string;sha256:str
 
 export function AcbaMemberDirectory({lang="th"}:{lang?:Language}){
  const en=lang==="en";
- return <section id="acba-member-directory" className="acba-member-directory" aria-labelledby="acba-member-directory-title">
+ const sectionRef=useRef<HTMLElement>(null);
+
+ useEffect(()=>{
+  const section=sectionRef.current;
+  if(!section || !("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+
+  const targets=Array.from(section.querySelectorAll<HTMLElement>("[data-member-motion]"));
+  // Elements already on-screen stay visible. Only upcoming sections animate as users scroll.
+  targets.forEach((element)=>{
+   const rect=element.getBoundingClientRect();
+   if(rect.top<window.innerHeight-20 && rect.bottom>0)element.classList.add("is-visible");
+  });
+  const observer=new IntersectionObserver((entries)=>{
+   entries.forEach(({target,isIntersecting})=>{
+    if(!isIntersecting)return;
+    target.classList.add("is-visible");
+    observer.unobserve(target);
+   });
+  },{threshold:.08,rootMargin:"0px 0px -28px 0px"});
+  targets.filter((element)=>!element.classList.contains("is-visible")).forEach((element)=>observer.observe(element));
+  section.classList.add("is-motion-ready");
+  return ()=>{observer.disconnect();section.classList.remove("is-motion-ready");};
+ },[]);
+
+ return <section ref={sectionRef} id="acba-member-directory" className="acba-member-directory" aria-labelledby="acba-member-directory-title">
   <div className="site-wrap acba-member-directory-intro">
-   <div className="acba-member-intro-labels">
+   <div className="acba-member-intro-labels" data-member-motion>
     <span className="acba-member-eyebrow">{en?"ACBA / MEMBER DIRECTORY":"ACBA / ทำเนียบสมาชิก"}</span>
     <span className="acba-member-dated">{en?"AS OF 30 MARCH 2026":"ข้อมูล ณ 30 มีนาคม 2569"}</span>
    </div>
    <div className="acba-member-intro-main">
-    <h2 id="acba-member-directory-title">{en?<>Our airline <span>members.</span></>:<>สายการบิน<span>สมาชิก ACBA</span></>}</h2>
-    <p>{en?"Airline companies named in the association's official March 2026 member list. Appointed general sales agents are shown where the source specifies them.":"รายชื่อสายการบินตามบัญชีสมาชิกของสมาคม ณ เดือนมีนาคม 2569 พร้อมข้อมูลบริษัทตัวแทน GSA เฉพาะรายการที่ระบุในเอกสาร"}</p>
+    <h2 id="acba-member-directory-title" data-member-motion>{en?<>Our airline <span>members.</span></>:<>สายการบิน<span>สมาชิก ACBA</span></>}</h2>
+    <p data-member-motion>{en?"Airline companies named in the association's official March 2026 member list. Appointed general sales agents are shown where the source specifies them.":"รายชื่อสายการบินตามบัญชีสมาชิกของสมาคม ณ เดือนมีนาคม 2569 พร้อมข้อมูลบริษัทตัวแทน GSA เฉพาะรายการที่ระบุในเอกสาร"}</p>
    </div>
   </div>
   <div className="acba-member-gallery">
    <div className="site-wrap acba-member-grid">
-    {AIRLINE_MEMBERS.map((member)=>{
+    {AIRLINE_MEMBERS.map((member,index)=>{
      const logo=LOGOS[member.code];
-     return <article className="acba-member-entry" key={member.code} data-airline={member.code}>
+     return <article className="acba-member-entry" key={member.code} data-airline={member.code} data-member-motion style={{"--member-stagger":`${index%3*80}ms`} as CSSProperties}>
       <div className="acba-member-brand">
        {logo?<Image src={logo.file} alt={member.airline+" logo"} width={280} height={130} unoptimized className="acba-member-logo"/>:
        <span className="acba-member-logo-unverified">{en?"Verified logo not available":"ยังไม่มีโลโก้ที่ตรวจสอบได้"}</span>}

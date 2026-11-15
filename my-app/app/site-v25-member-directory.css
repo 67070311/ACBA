@@ -28,3 +28,30 @@
 .acba-member-source p{font-size:11px;line-height:1.9;margin:0;max-width:630px}
 @media(max-width:1040px){.acba-member-intro-main{grid-template-columns:minmax(0,1fr) minmax(230px,.65fr);gap:38px}.acba-member-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:680px){.acba-member-directory-intro{padding-top:65px;padding-bottom:40px}.acba-member-intro-labels{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:22px}.acba-member-intro-main{display:block}.acba-member-intro-main h2{font-size:clamp(40px,9vw,61px);letter-spacing:-.06em}.acba-member-intro-main p{border-left:0;padding-left:0;margin-top:24px;max-width:510px;font-size:13px}.acba-member-gallery{padding-top:5px;padding-bottom:35px}.acba-member-grid{grid-template-columns:1fr}.acba-member-entry{min-height:211px;padding:24px 0 27px}.acba-member-brand{height:116px;margin-bottom:6px}.acba-member-logo{max-height:90px;max-width:min(80%,320px)}.acba-member-identity h3{font-size:17px}.acba-member-gsa{font-size:12px}.acba-member-source{flex-direction:column;gap:8px;padding-bottom:50px}}
+
+/* One-time scroll reveals. Server HTML remains visible until JS explicitly enables motion. */
+@media (prefers-reduced-motion: no-preference){
+ .acba-member-directory.is-motion-ready [data-member-motion]{
+  opacity:0;transform:translate3d(0,20px,0);
+  transition:opacity .72s cubic-bezier(.22,1,.36,1),transform .72s cubic-bezier(.22,1,.36,1);
+  transition-delay:var(--member-stagger,0ms);
+ }
+ .acba-member-directory.is-motion-ready [data-member-motion].is-visible{
+  opacity:1;transform:translate3d(0,0,0);
+ }
+ .acba-member-directory.is-motion-ready .acba-member-intro-main h2{transition-delay:90ms}
+ .acba-member-directory.is-motion-ready .acba-member-intro-main p{transition-delay:150ms}
+}
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+ .acba-member-brand{transition:transform .42s cubic-bezier(.22,1,.36,1)}
+ .acba-member-entry:hover .acba-member-brand{transform:translate3d(0,-4px,0)}
+ .acba-member-identity h3{transition:color .32s ease}
+ .acba-member-entry:hover .acba-member-identity h3{color:#bd3147}
+}
+@media (max-width:680px){
+ .acba-member-entry{--member-stagger:0ms!important}
+}
+@media (prefers-reduced-motion:reduce){
+ .acba-member-directory [data-member-motion]{opacity:1!important;transform:none!important;transition:none!important}
+ .acba-member-brand,.acba-member-identity h3{transition:none!important}
+}
