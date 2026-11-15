@@ -59,7 +59,7 @@ export function AcbaMemberDirectory({lang="th"}:{lang?:Language}){
        <h3>{member.airline}</h3>
        <span className="acba-member-code">{member.code}</span>
       </div>
-      {member.gsa?<p className="acba-member-gsa"><span>GSA</span>{member.gsa}</p>:null}
+      {member.gsa?<><p className="acba-member-gsa"><span>GSA</span>{member.gsa}</p><details className="acba-member-gsa-details"><summary>GSA</summary><p>{member.gsa}</p></details></>:null}
      </article>;
     })}
    </div>
