@@ -4,6 +4,7 @@ import {ButtonLink,Eyebrow} from "./ui-elements";
 import {Reveal} from "./ui-reveal";
 import {Photo} from "./site-photo";
 import {IMAGES} from "./site-content";
+import {AcbaMemberDirectory} from "./acba-member-directory";
 type Lang="th"|"en";
 export function MembersPage({lang="th"}:{lang?:Lang}){
  const en=lang==="en",to=(s:string)=>en?"/en"+s:s;
@@ -13,9 +14,10 @@ export function MembersPage({lang="th"}:{lang?:Lang}){
    <Reveal delay={100}><div className="members-v8-visual"><Photo src={IMAGES.membersHero} alt={en?"Business professionals collaborating in a meeting":"ภาพประกอบกลุ่มคนทำงานร่วมกันในที่ประชุม"}/><span className="members-v8-image-credit">AIR CARGO / MEMBERSHIP</span></div></Reveal>
   </section>
   <section className="site-wrap members-directory-intro" id="acba-member-directory">
-   <div><Eyebrow>{en?"OFFICIAL MEMBER DIRECTORY":"ทำเนียบสมาชิก ACBA"}</Eyebrow><h2>{en?<>Airlines & member<br/><em>organizations.</em></>:<>สายการบินและ<br/><em>บริษัทสมาชิก</em></>}</h2><p className="acba-directory-explain">{en?"This section is reserved for verified ACBA member names, airline identities, logos and company profiles. External organizations listed as TAFA members are not copied into ACBA's directory.":"ส่วนนี้จัดไว้สำหรับชื่อสายการบิน บริษัทสมาชิก โลโก้ และรายละเอียดบริษัทที่สมาคม ACBA รับรองแล้ว โดยไม่นำสมาชิก TAFA หรือเครือข่ายหน่วยงานอื่นมาแสดงเป็นสมาชิก ACBA"}</p></div>
+   <div><Eyebrow>{en?"OFFICIAL MEMBER DIRECTORY":"ทำเนียบสมาชิก ACBA"}</Eyebrow><h2>{en?<>Airlines & member<br/><em>organizations.</em></>:<>สายการบินและ<br/><em>บริษัทสมาชิก</em></>}</h2><p className="acba-directory-explain">{en?"The ACBA airline member directory below follows the association roster dated March 30, 2026. Only identifiable logo files are displayed.":"ทำเนียบสมาชิกสายการบินด้านล่างอ้างอิงรายชื่อของสมาคม ณ วันที่ 30 มีนาคม 2569 และใช้เฉพาะไฟล์โลโก้ที่ตรวจสอบที่มาและตัวตนได้"}</p></div>
    <div className="directory-status"><strong>{en?"ACBA member community":"เครือข่ายสมาชิก ACBA"}</strong><p>{en?"Explore the association's air cargo business community and connections across the industry.":"พื้นที่แนะนำสมาชิกและเครือข่ายธุรกิจขนส่งสินค้าทางอากาศ พร้อมข้อมูลการเชื่อมโยงผู้ประกอบการ"}</p><span className="directory-label">{en?"AIR CARGO BUSINESS NETWORK":"เครือข่ายผู้ประกอบการ Air Cargo"}</span></div>
   </section>
+  <AcbaMemberDirectory lang={lang}/>
   <section className="acba-member-action"><div className="site-wrap acba-member-action-inner"><div><span>MEMBERSHIP / APPLICATION</span><h2>{en?"Become part of the community.":"สนใจสมัครสมาชิก ACBA?"}</h2><p>{en?"Explore membership information, prepare company details and create an application document.":"ศึกษาข้อมูลสมาชิก เตรียมรายละเอียดบริษัท และจัดทำเอกสารประกอบการสมัคร"}</p></div><Link href={to("/join")}>{en?"Membership application":"ดูหน้าสมัครสมาชิก"} <Icon name="arrow-up-right" size={16}/></Link></div></section>
   <section className="site-wrap acba-member-context"><span>{en?"RELATED INDUSTRY WORK":"บทบาทร่วมกับอุตสาหกรรม"}</span><h2>{en?"Working with sector partners.":"ความร่วมมือที่มีหลักฐานเผยแพร่"}</h2><p>{en?"Reports from CAAT, Customs and TAFA document cooperation involving ACBA. These relationships do not imply that the other organizations are ACBA members.":"รายงานของ CAAT ศุลกากร และ TAFA ระบุการประสานงานที่มี ACBA เกี่ยวข้อง ซึ่งไม่ใช่หลักฐานว่าหน่วยงานเหล่านั้นเป็นสมาชิกของสมาคม"}</p><Link href={to("/news?category=activities")}>{en?"See association activities":"ดูการดำเนินงานและกิจกรรม"} <Icon name="arrow-up-right" size={16}/></Link></section>
  </main>;

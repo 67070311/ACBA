@@ -1,0 +1,29 @@
+/* ACBA member roster, sourced from the dated association document. */
+.acba-member-directory{padding-bottom:100px;scroll-margin-top:125px}
+.acba-member-directory-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;margin:5px 0 32px}
+.acba-member-directory-heading>div:first-child{max-width:730px}
+.acba-member-directory-kicker{font-size:10px;letter-spacing:.14em;color:#bf3147;font-weight:800}
+.acba-member-directory-heading h2{font-family:"Anuphan",sans-serif;font-size:clamp(27px,3.4vw,42px);letter-spacing:-.045em;color:#203d50;margin:13px 0 12px;line-height:1.3}
+.acba-member-directory-heading p{font-size:13px;line-height:1.95;color:#667c8d;margin:0}
+.acba-member-directory-count{flex-shrink:0;display:flex;align-items:flex-end;gap:11px;border-left:2px solid #d42f44;padding:3px 0 3px 18px}
+.acba-member-directory-count strong{font-family:"Plus Jakarta Sans",sans-serif;font-size:44px;font-weight:800;color:#d03449;line-height:1}
+.acba-member-directory-count span{font-size:10px;letter-spacing:.08em;font-weight:800;line-height:1.5;color:#647e8a;max-width:95px}
+.acba-member-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.acba-member-card{min-width:0;display:flex;flex-direction:column;border:1px solid #dae5ec;background:#fff;border-radius:14px;padding:19px 20px 20px;transition:border-color .2s,box-shadow .2s,transform .2s}
+.acba-member-card:hover{border-color:#b5ccd8;box-shadow:0 10px 25px rgba(22,63,86,.07);transform:translateY(-2px)}
+.acba-member-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#94a4af;font-size:10px;letter-spacing:.08em;font-weight:800}
+.acba-member-card-top strong{font-size:12px;letter-spacing:.05em;background:#f1f6f9;color:#425f71;border:1px solid #e0eaf0;border-radius:6px;padding:5px 9px}
+.acba-member-logo-frame{height:105px;display:flex;align-items:center;justify-content:center;padding:12px;margin:14px 0 9px;border-radius:10px;background:#f8fbfc;overflow:hidden}
+.acba-member-logo{display:block;max-width:100%;max-height:74px;width:auto;height:auto;object-fit:contain}
+.acba-member-logo-unverified{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:7px;text-align:center;color:#8396a3;font-size:10px;line-height:1.5}
+.acba-member-logo-placeholder-code{font-family:"Plus Jakarta Sans",sans-serif;font-size:29px;font-weight:750;letter-spacing:.04em;color:#cbd7df}
+.acba-member-card h3{color:#254459;font-size:16px;letter-spacing:-.025em;line-height:1.5;margin:6px 0 17px;overflow-wrap:anywhere}
+.acba-member-gsa{margin-top:auto;border-top:1px solid #e6edf1;padding-top:12px}
+.acba-member-gsa>span{display:block;font-size:9px;letter-spacing:.08em;font-weight:800;color:#9a6873}
+.acba-member-gsa p{color:#607789;font-size:11px;line-height:1.7;margin:5px 0 0;overflow-wrap:anywhere}
+.acba-member-source{margin-top:24px;border-top:1px solid #dce6ec;padding-top:16px;display:flex;justify-content:space-between;gap:24px;color:#6e8392}
+.acba-member-source p{font-size:11px;line-height:1.8;margin:0;max-width:660px}
+@media(max-width:1150px){.acba-member-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.acba-member-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.acba-member-source{flex-direction:column;gap:6px}}
+@media(max-width:550px){.acba-member-directory{padding-bottom:65px}.acba-member-directory-heading{align-items:flex-start;flex-direction:column;gap:20px}.acba-member-grid{grid-template-columns:1fr;gap:12px}.acba-member-card{padding:17px}.acba-member-logo-frame{height:112px}.acba-member-card h3{font-size:17px;margin-bottom:14px}.acba-member-directory-count strong{font-size:38px}}
+@media(prefers-reduced-motion:reduce){.acba-member-card{transition:none}.acba-member-card:hover{transform:none}}
