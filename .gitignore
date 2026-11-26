@@ -8,3 +8,9 @@
 **/.env.*
 **/*.tsbuildinfo
 .DS_Store
+
+# Generated root compatibility build
+/app/
+/public/
+/.acba-root-generated
+/next-env.d.ts
